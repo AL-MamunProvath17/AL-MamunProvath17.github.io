@@ -27,7 +27,6 @@ The website is based on a lightweight HTML/CSS template adapted from [Jon Barron
 
 ````
 
----
 
 ## 🛠️ How to Use
 1. Clone this repository:
@@ -43,7 +42,6 @@ The website is based on a lightweight HTML/CSS template adapted from [Jon Barron
    * **CV/Bio** → Replace `data/Provath-CV.pdf` and `data/Provath-bio.txt`.
    * **Links** → Update the email, Scholar, LinkedIn, or GitHub links in the header.
 
----
 
 ## 🌐 Deployment
 
@@ -56,14 +54,13 @@ You can host this site for free using **GitHub Pages**:
 
    https://your-username.github.io/portfolio/
    
----
+
 
 ## 📜 Acknowledgments
 
 * Website design inspired by [Maxine Perroni-Scharf](https://maxineaps.github.io/).
 * Original code adapted from [Jon Barron's academic website](https://github.com/jonbarron/jonbarron_website).
 
----
 
 ## 👤 Author
 
