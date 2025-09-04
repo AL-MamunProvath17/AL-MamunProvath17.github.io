@@ -1,235 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Md. Al-Mamun Provath - Publications</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Md. Al-Mamun Provath - Portfolio</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f9f9f9;
       margin: 0;
       padding: 0;
+      background: #f9f9f9;
+      color: #333;
     }
-
-    .section {
-      max-width: 900px;
-      margin: 40px auto;
+    header {
+      background: #222;
+      color: #fff;
       padding: 20px;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .section-title {
+      font-size: 26px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+    }
+    /* Research cards */
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .research-card {
       background: #fff;
+      padding: 20px;
       border-radius: 10px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-
-    .section-title {
-      font-size: 28px;
-      margin-bottom: 15px;
-      color: #333;
-      text-align: center;
-    }
-
+    /* Publications */
     .publication-filters {
-      text-align: center;
       margin-bottom: 20px;
     }
-
     .filter-btn {
-      margin: 3px;
-      padding: 8px 14px;
-      border: none;
-      background: #eee;
+      margin: 5px;
+      padding: 6px 12px;
+      border: 1px solid #333;
+      background: #fff;
       cursor: pointer;
-      border-radius: 6px;
-      transition: 0.2s;
+      border-radius: 5px;
     }
-
     .filter-btn.active {
-      background: #0073e6;
+      background: #333;
       color: #fff;
     }
-
     .publication-item {
-      border-left: 4px solid #0073e6;
-      padding: 12px;
-      margin-bottom: 15px;
-      background: #fafafa;
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 15px;
       border-radius: 8px;
+      margin-bottom: 15px;
     }
-
     .publication-badge {
       font-weight: bold;
-      color: #0073e6;
-      margin-bottom: 5px;
+      color: #555;
     }
-
     .publication-title a {
       font-size: 18px;
       font-weight: bold;
-      color: #000;
       text-decoration: none;
+      color: #0073e6;
     }
-
-    .publication-title a:hover {
-      text-decoration: underline;
-    }
-
     .publication-authors {
       font-size: 14px;
-      margin-top: 5px;
-      color: #444;
+      margin: 5px 0;
     }
-
     .publication-venue {
-      font-size: 14px;
       font-style: italic;
-      color: #666;
-      margin-top: 3px;
+      margin-bottom: 5px;
+    }
+    .metric-badge {
+      display: inline-block;
+      background: #eee;
+      padding: 3px 8px;
+      margin-right: 5px;
+      border-radius: 12px;
+      font-size: 12px;
+    }
+    .hidden {
+      display: none;
+    }
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
+  <!-- Header -->
+  <header>
+    <h1>Md. Al-Mamun Provath</h1>
+    <nav>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Research Interests -->
+  <section id="research" class="section">
+    <h2 class="section-title">Research Interests</h2>
+    <div class="research-grid">
+      <div class="research-card">Deep Learning for Computer Vision</div>
+      <div class="research-card">Violence Detection in Videos</div>
+      <div class="research-card">Explainable AI</div>
+      <div class="research-card">Adversarial Machine Learning</div>
+    </div>
+  </section>
 
   <!-- Publications -->
   <section id="publications" class="section">
-    <h2 class="section-title">Publications</h2>
-    <p style="text-align:center;">
-      <em>
-        Total Citations: 63+, i10-index: 2 
-        (<a href="https://scholar.google.com/citations?hl=en&user=ylvGqngAAAAJ" target="_blank">Google Scholar</a>) | 
-        First/Co-First Author on 11 Publications | Corresponding Author(*) on 2 Papers
-      </em>
-    </p>
-
-    <!-- Filters -->
+    <h2 class="section-title">Selected Publications</h2>
+    
     <div class="publication-filters">
-      <button class="filter-btn active">All</button>
-      <button class="filter-btn">2025</button>
-      <button class="filter-btn">2024</button>
-      <button class="filter-btn">2023</button>
-      <button class="filter-btn">Journals</button>
-      <button class="filter-btn">Conferences</button>
-      <button class="filter-btn">Book Chapters</button>
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="2025">2025</button>
+      <button class="filter-btn" data-filter="2024">2024</button>
+      <button class="filter-btn" data-filter="2023">2023</button>
+      <button class="filter-btn" data-filter="journals">Journals</button>
+      <button class="filter-btn" data-filter="conferences">Conferences</button>
+      <button class="filter-btn" data-filter="book">Book Chapters</button>
     </div>
 
-    <!-- Journal Papers -->
-    <div class="publication-item" data-year="2025" data-type="journal">
+    <!-- Example items -->
+    <div class="publication-item" data-year="2025" data-type="journals">
       <div class="publication-badge">2025</div>
       <div class="publication-title">
-        <a href="https://doi.org/10.1109/ACCESS.2025.3541059" target="_blank">
-          DeepGuard: Enhancing Violence Detection in Smart Cities through Deep Learning
-        </a>
+        <a href="https://doi.org/10.1109/ACCESS.2025.3541059">DeepGuard: Enhancing Violence Detection in Smart Cities Through Deep Learning</a>
       </div>
       <div class="publication-authors"><strong>Md. Al-Mamun Provath</strong>, M. Rahman, et al.</div>
       <div class="publication-venue">IEEE Access (IF: 3.9)</div>
-    </div>
-
-    <div class="publication-item" data-year="2025" data-type="journal">
-      <div class="publication-badge">2025</div>
-      <div class="publication-title">
-        <a href="https://ieeexplore.ieee.org/document/10949191/" target="_blank">
-          Deep Learning-Based Image Watermarking using Catalan Transform and NMF
-        </a>
+      <div class="publication-metrics">
+        <span class="metric-badge">92.86% Accuracy</span>
+        <span class="metric-badge">1.9M Parameters</span>
       </div>
-      <div class="publication-authors">F.H. Saikat, <strong>Md. Al-Mamun Provath</strong>, et al.</div>
-      <div class="publication-venue">IEEE Access (IF: 3.9)</div>
     </div>
 
-    <div class="publication-item" data-year="2025" data-type="journal">
+    <div class="publication-item" data-year="2025" data-type="journals">
       <div class="publication-badge">2025</div>
       <div class="publication-title">
-        <a href="https://ieeexplore.ieee.org/document/10856108" target="_blank">
-          CAMFusion: Context-Aware Multi-Modal Fusion for Detecting Sarcasm & Humor
-        </a>
+        <a href="https://ieeexplore.ieee.org/document/10856108">CAMFusion: Context-Aware Multi-Modal Fusion Framework</a>
       </div>
       <div class="publication-authors">M. Rahman, <strong>Md. Al-Mamun Provath</strong>, et al.</div>
       <div class="publication-venue">IEEE Access (IF: 3.9)</div>
     </div>
 
-    <div class="publication-item" data-year="2023" data-type="journal">
+    <div class="publication-item" data-year="2023" data-type="journals">
       <div class="publication-badge">2023</div>
       <div class="publication-title">
-        <a href="https://ieeexplore.ieee.org/document/10271288/" target="_blank">
-          Classification of Lung and Colon Cancer Histopathological Images
-        </a>
+        <a href="https://ieeexplore.ieee.org/document/10271288/">Classification of Lung and Colon Cancer Histopathological Images</a>
       </div>
       <div class="publication-authors"><strong>Md. Al-Mamun Provath</strong>, K. Deb, et al.</div>
       <div class="publication-venue">IEEE Access (IF: 3.9)</div>
     </div>
 
-    <div class="publication-item" data-year="2024" data-type="journal">
-      <div class="publication-badge">2024</div>
-      <div class="publication-title">
-        <a href="https://onlinelibrary.wiley.com/doi/full/10.1155/adce/8534390" target="_blank">
-          Strength Prediction of Geopolymer Concrete Using ANN
-        </a>
-      </div>
-      <div class="publication-authors">M.M. Islam, <strong>Md. Al-Mamun Provath</strong>, et al.</div>
-      <div class="publication-venue">Advances in Civil Engineering (IF: 1.8)</div>
-    </div>
-
-    <!-- Book Chapter -->
-    <div class="publication-item" data-year="2023" data-type="book">
-      <div class="publication-badge">2023</div>
-      <div class="publication-title">
-        <a href="https://link.springer.com/book/10.1007/978-981-99-4914-4" target="_blank">
-          Classification of Lung and Colon Cancer Using Deep Learning
-        </a>
-      </div>
-      <div class="publication-authors"><strong>Md. Al-Mamun Provath</strong>, K. Deb, et al.</div>
-      <div class="publication-venue">Springer, IW-FCV</div>
-    </div>
-
-    <!-- Conference Papers -->
-    <div class="publication-item" data-year="2025" data-type="conference">
+    <div class="publication-item" data-year="2025" data-type="conferences">
       <div class="publication-badge">2025</div>
       <div class="publication-title">
         Zero-Shot Face Recognition via Fine-Tuning CLIP with Contrastive Alignment
       </div>
       <div class="publication-authors">M.K. Islam, ..., <strong>Md. Al-Mamun Provath*</strong>, et al.</div>
-      <div class="publication-venue">NCIM 2025, Gazipur, Bangladesh</div>
+      <div class="publication-venue">NCIM 2025</div>
     </div>
 
-    <div class="publication-item" data-year="2024" data-type="conference">
-      <div class="publication-badge">2024</div>
+    <div class="publication-item" data-year="2023" data-type="book">
+      <div class="publication-badge">2023</div>
       <div class="publication-title">
-        <a href="https://ieeexplore.ieee.org/abstract/document/10595782/" target="_blank">
-          XAI-Driven Lightweight Multiscale ConvLSTM for Video Violence Detection
-        </a>
+        <a href="https://link.springer.com/book/10.1007/978-981-99-4914-4">Classification of Lung and Colon Cancer Using Deep Learning</a>
       </div>
       <div class="publication-authors"><strong>Md. Al-Mamun Provath</strong>, K. Deb, et al.</div>
-      <div class="publication-venue">IEEE ISIE 2024</div>
+      <div class="publication-venue">Springer Book Chapter</div>
     </div>
   </section>
 
-  <!-- Filtering Logic -->
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <h2 class="section-title">Contact</h2>
+    <p>Email: provath@example.com</p>
+    <p>LinkedIn: <a href="#">linkedin.com/in/provath</a></p>
+    <p>Google Scholar: <a href="https://scholar.google.com/citations?hl=en&user=ylvGqngAAAAJ">View Profile</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Md. Al-Mamun Provath. All rights reserved.</p>
+  </footer>
+
+  <!-- JS for filters -->
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const filterButtons = document.querySelectorAll(".filter-btn");
-      const publications = document.querySelectorAll(".publication-item");
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const publications = document.querySelectorAll(".publication-item");
 
-      filterButtons.forEach(button => {
-        button.addEventListener("click", () => {
-          filterButtons.forEach(btn => btn.classList.remove("active"));
-          button.classList.add("active");
+    filterButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        filterButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
 
-          const filter = button.textContent.trim();
+        const filter = btn.getAttribute("data-filter");
 
-          publications.forEach(pub => {
-            pub.style.display = "block"; // reset
+        publications.forEach(item => {
+          item.classList.remove("hidden");
+          const year = item.dataset.year;
+          const type = item.dataset.type;
 
-            if (filter !== "All") {
-              const year = pub.dataset.year;
-              const type = pub.dataset.type;
-
-              if (!(filter === year || filter.toLowerCase() === type)) {
-                pub.style.display = "none";
-              }
-            }
-          });
+          if (filter !== "all" && filter !== year && filter !== type) {
+            item.classList.add("hidden");
+          }
         });
       });
     });
   </script>
-
 </body>
 </html>
