@@ -1,6 +1,6 @@
 # 🎓  Academic Portfolio - Md. Al-Mamun Provath
 
-A cutting-edge, responsive academic portfolio designed specifically for PhD applications and research showcases. Built with modern web technologies and optimized for academic excellence presentation.
+A  responsive academic portfolio designed specifically for PhD applications and research showcases. Built with modern web technologies and optimized for academic excellence presentation.
 
 ## ✨ Features
 
