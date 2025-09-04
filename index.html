@@ -1,869 +1,235 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Md. Al-Mamun Provath - AI Research Scholar</title>
-    <meta name="author" content="Md. Al-Mamun Provath">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-    
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
-      
-      :root {
-        --primary-gradient: linear-gradient(135deg, #1e1b4b 0%, #3730a3 100%);
-        --secondary-gradient: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%);
-        --accent-color: #06b6d4;
-        --highlight-color: #fbbf24;
-        --text-primary: #1e293b;
-        --text-secondary: #64748b;
-        --bg-primary: #ffffff;
-        --bg-secondary: #f8fafc;
-        --glass-bg: rgba(255, 255, 255, 0.1);
-        --glass-border: rgba(255, 255, 255, 0.2);
-      }
-      
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      
-      html {
-        scroll-behavior: smooth;
-      }
-      
-      body {
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-        line-height: 1.6;
-        color: var(--text-primary);
-        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-        overflow-x: hidden;
-      }
-      
-      /* Modern Navigation */
-      .navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 1000;
-        background: rgba(30, 27, 75, 0.95);
-        backdrop-filter: blur(20px);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        transition: all 0.3s ease;
-      }
-      
-      .nav-container {
-        max-width: 1400px;
-        margin: 0 auto;
-        padding: 0 2rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 70px;
-      }
-      
-      .nav-logo {
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: white;
-        text-decoration: none;
-        background: linear-gradient(45deg, #06b6d4, #fbbf24);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-      
-      .nav-menu {
-        display: flex;
-        list-style: none;
-        gap: 2rem;
-      }
-      
-      .nav-menu a {
-        color: rgba(255, 255, 255, 0.8);
-        text-decoration: none;
-        font-weight: 500;
-        transition: all 0.3s ease;
-        position: relative;
-        padding: 0.5rem 1rem;
-        border-radius: 50px;
-      }
-      
-      .nav-menu a:hover {
-        color: white;
-        background: var(--glass-bg);
-        backdrop-filter: blur(10px);
-        border: 1px solid var(--glass-border);
-      }
-      
-      .nav-menu a::after {
-        content: '';
-        position: absolute;
-        bottom: -5px;
-        left: 50%;
-        width: 0;
-        height: 2px;
-        background: var(--accent-color);
-        transition: all 0.3s ease;
-        transform: translateX(-50%);
-      }
-      
-      .nav-menu a:hover::after {
-        width: 80%;
-      }
-      
-      .mobile-menu-toggle {
-        display: none;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 1.5rem;
-        cursor: pointer;
-      }
-      
-      /* Hero Section */
-      .hero {
-        background: var(--primary-gradient);
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        position: relative;
-        overflow: hidden;
-        padding-top: 70px;
-      }
-      
-      .hero::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="1" fill="white" opacity="0.1"/><circle cx="80" cy="40" r="0.5" fill="cyan" opacity="0.2"/><circle cx="40" cy="80" r="1.5" fill="white" opacity="0.15"/></svg>') repeat;
-        background-size: 100px 100px;
-        animation: float 20s ease-in-out infinite;
-      }
-      
-      @keyframes float {
-        0%, 100% { transform: translate(0, 0); }
-        50% { transform: translate(10px, -10px); }
-      }
-      
-      .hero-container {
-        max-width: 1400px;
-        margin: 0 auto;
-        padding: 0 2rem;
-        display: grid;
-        grid-template-columns: 1fr 300px;
-        gap: 4rem;
-        align-items: center;
-        position: relative;
-        z-index: 2;
-      }
-      
-      .hero-content h1 {
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: clamp(2.5rem, 5vw, 4rem);
-        font-weight: 700;
-        color: white;
-        margin-bottom: 1rem;
-        background: linear-gradient(45deg, #ffffff, #06b6d4, #fbbf24);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        animation: shimmer 3s ease-in-out infinite;
-      }
-      
-      @keyframes shimmer {
-        0%, 100% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-      }
-      
-      .hero-subtitle {
-        font-size: 1.25rem;
-        font-weight: 500;
-        color: rgba(255, 255, 255, 0.9);
-        margin-bottom: 0.5rem;
-      }
-      
-      .hero-university {
-        font-size: 1.1rem;
-        color: rgba(255, 255, 255, 0.8);
-        margin-bottom: 2rem;
-      }
-      
-      .hero-vision {
-        font-size: 1.1rem;
-        line-height: 1.7;
-        color: rgba(255, 255, 255, 0.85);
-        margin-bottom: 2.5rem;
-        max-width: 600px;
-      }
-      
-      .hero-stats {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
-        margin-bottom: 2.5rem;
-      }
-      
-      .stat-item {
-        text-align: center;
-        padding: 1.5rem;
-        background: var(--glass-bg);
-        backdrop-filter: blur(20px);
-        border: 1px solid var(--glass-border);
-        border-radius: 15px;
-        transition: transform 0.3s ease;
-      }
-      
-      .stat-item:hover {
-        transform: translateY(-5px);
-      }
-      
-      .stat-number {
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: 2rem;
-        font-weight: 700;
-        color: var(--accent-color);
-        display: block;
-      }
-      
-      .stat-label {
-        font-size: 0.9rem;
-        color: rgba(255, 255, 255, 0.8);
-        margin-top: 0.5rem;
-      }
-      
-      .hero-cta {
-        display: flex;
-        gap: 1rem;
-        flex-wrap: wrap;
-      }
-      
-      .cta-button {
-        padding: 0.875rem 2rem;
-        border: none;
-        border-radius: 50px;
-        font-weight: 600;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        position: relative;
-        overflow: hidden;
-        backdrop-filter: blur(10px);
-      }
-      
-      .cta-primary {
-        background: var(--secondary-gradient);
-        color: white;
-        box-shadow: 0 10px 30px rgba(6, 182, 212, 0.3);
-      }
-      
-      .cta-secondary {
-        background: var(--glass-bg);
-        color: white;
-        border: 1px solid var(--glass-border);
-      }
-      
-      .cta-button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 15px 40px rgba(6, 182, 212, 0.4);
-      }
-      
-      .hero-image {
-        width: 300px;
-        height: 300px;
-        border-radius: 50%;
-        border: 4px solid var(--glass-border);
-        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
-        object-fit: cover;
-        background: var(--glass-bg);
-        backdrop-filter: blur(20px);
-        transition: transform 0.5s ease;
-      }
-      
-      .hero-image:hover {
-        transform: scale(1.05) rotate(5deg);
-      }
-      
-      /* Section Styles */
-      .section {
-        padding: 5rem 2rem;
-        max-width: 1400px;
-        margin: 0 auto;
-      }
-      
-      .section-title {
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: 2.5rem;
-        font-weight: 700;
-        text-align: center;
-        margin-bottom: 3rem;
-        background: var(--primary-gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        position: relative;
-      }
-      
-      .section-title::after {
-        content: '';
-        position: absolute;
-        bottom: -15px;
-        left: 50%;
-        width: 80px;
-        height: 4px;
-        background: var(--secondary-gradient);
-        border-radius: 2px;
-        transform: translateX(-50%);
-      }
-      
-      /* Research Interests */
-      .research-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 2rem;
-      }
-      
-      .research-card {
-        padding: 2rem;
-        background: var(--bg-primary);
-        border-radius: 20px;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-        border: 1px solid rgba(6, 182, 212, 0.1);
-        transition: all 0.3s ease;
-        position: relative;
-        overflow: hidden;
-      }
-      
-      .research-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 4px;
-        background: var(--secondary-gradient);
-      }
-      
-      .research-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-        border-color: var(--accent-color);
-      }
-      
-      .research-icon {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-      }
-      
-      .research-title {
-        font-size: 1.25rem;
-        font-weight: 600;
-        margin-bottom: 1rem;
-        color: var(--text-primary);
-      }
-      
-      .research-description {
-        color: var(--text-secondary);
-        line-height: 1.6;
-      }
-      
-      /* Publications */
-      .publication-filters {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-        margin-bottom: 3rem;
-        flex-wrap: wrap;
-      }
-      
-      .filter-btn {
-        padding: 0.5rem 1.5rem;
-        border: 2px solid var(--accent-color);
-        background: transparent;
-        color: var(--accent-color);
-        border-radius: 50px;
-        font-weight: 500;
-        cursor: pointer;
-        transition: all 0.3s ease;
-      }
-      
-      .filter-btn.active,
-      .filter-btn:hover {
-        background: var(--accent-color);
-        color: white;
-      }
-      
-      .publication-item {
-        background: var(--bg-primary);
-        border-radius: 20px;
-        padding: 2rem;
-        margin-bottom: 2rem;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-        border: 1px solid rgba(6, 182, 212, 0.1);
-        transition: all 0.3s ease;
-        position: relative;
-      }
-      
-      .publication-item:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
-      }
-      
-      .publication-badge {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        background: var(--secondary-gradient);
-        color: white;
-        padding: 0.5rem 1rem;
-        border-radius: 20px;
-        font-size: 0.875rem;
-        font-weight: 600;
-      }
-      
-      .publication-title {
-        font-size: 1.25rem;
-        font-weight: 600;
-        margin-bottom: 1rem;
-        padding-right: 80px;
-      }
-      
-      .publication-title a {
-        color: inherit;
-        text-decoration: none;
-        transition: color 0.3s ease;
-      }
-      
-      .publication-title a:hover {
-        color: var(--accent-color);
-      }
-      
-      .publication-authors {
-        color: var(--text-secondary);
-        margin-bottom: 0.5rem;
-      }
-      
-      .publication-venue {
-        color: var(--accent-color);
-        font-weight: 600;
-        margin-bottom: 1rem;
-      }
-      
-      .publication-metrics {
-        display: flex;
-        gap: 1rem;
-        margin-top: 1rem;
-      }
-      
-      .metric-badge {
-        background: rgba(6, 182, 212, 0.1);
-        color: var(--accent-color);
-        padding: 0.25rem 0.75rem;
-        border-radius: 20px;
-        font-size: 0.875rem;
-        font-weight: 500;
-      }
-      
-      /* Contact Section */
-      .contact-section {
-        background: var(--primary-gradient);
-        color: white;
-        text-align: center;
-        padding: 5rem 2rem;
-        position: relative;
-        overflow: hidden;
-      }
-      
-      .contact-section::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1.5" fill="cyan" opacity="0.2"/></svg>') repeat;
-        background-size: 150px 150px;
-      }
-      
-      .contact-content {
-        position: relative;
-        z-index: 2;
-        max-width: 800px;
-        margin: 0 auto;
-      }
-      
-      .contact-title {
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-      }
-      
-      .contact-subtitle {
-        font-size: 1.25rem;
-        margin-bottom: 3rem;
-        opacity: 0.9;
-      }
-      
-      .contact-links {
-        display: flex;
-        justify-content: center;
-        gap: 1.5rem;
-        flex-wrap: wrap;
-      }
-      
-      .contact-link {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        padding: 0.875rem 2rem;
-        background: var(--glass-bg);
-        backdrop-filter: blur(20px);
-        border: 1px solid var(--glass-border);
-        border-radius: 50px;
-        color: white;
-        text-decoration: none;
-        font-weight: 500;
-        transition: all 0.3s ease;
-      }
-      
-      .contact-link:hover {
-        background: rgba(255, 255, 255, 0.2);
-        transform: translateY(-2px);
-      }
-      
-      /* Footer */
-      .footer {
-        background: #0f172a;
-        color: rgba(255, 255, 255, 0.7);
-        text-align: center;
-        padding: 2rem;
-      }
-      
-      /* Mobile Responsive */
-      @media (max-width: 768px) {
-        .nav-menu {
-          display: none;
-        }
-        
-        .mobile-menu-toggle {
-          display: block;
-        }
-        
-        .hero-container {
-          grid-template-columns: 1fr;
-          text-align: center;
-          gap: 2rem;
-        }
-        
-        .hero-stats {
-          grid-template-columns: repeat(2, 1fr);
-        }
-        
-        .hero-image {
-          width: 250px;
-          height: 250px;
-        }
-        
-        .research-grid {
-          grid-template-columns: 1fr;
-        }
-        
-        .section {
-          padding: 3rem 1rem;
-        }
-        
-        .publication-badge {
-          position: static;
-          display: inline-block;
-          margin-bottom: 1rem;
-        }
-        
-        .publication-title {
-          padding-right: 0;
-        }
-      }
-    </style>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Md. Al-Mamun Provath - Publications</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
 
-  <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-      <div class="nav-container">
-        <a href="#home" class="nav-logo">AM Provath</a>
-        <ul class="nav-menu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#research">Research</a></li>
-          <li><a href="#publications">Publications</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <button class="mobile-menu-toggle">☰</button>
+    .section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .section-title {
+      font-size: 28px;
+      margin-bottom: 15px;
+      color: #333;
+      text-align: center;
+    }
+
+    .publication-filters {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .filter-btn {
+      margin: 3px;
+      padding: 8px 14px;
+      border: none;
+      background: #eee;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: 0.2s;
+    }
+
+    .filter-btn.active {
+      background: #0073e6;
+      color: #fff;
+    }
+
+    .publication-item {
+      border-left: 4px solid #0073e6;
+      padding: 12px;
+      margin-bottom: 15px;
+      background: #fafafa;
+      border-radius: 8px;
+    }
+
+    .publication-badge {
+      font-weight: bold;
+      color: #0073e6;
+      margin-bottom: 5px;
+    }
+
+    .publication-title a {
+      font-size: 18px;
+      font-weight: bold;
+      color: #000;
+      text-decoration: none;
+    }
+
+    .publication-title a:hover {
+      text-decoration: underline;
+    }
+
+    .publication-authors {
+      font-size: 14px;
+      margin-top: 5px;
+      color: #444;
+    }
+
+    .publication-venue {
+      font-size: 14px;
+      font-style: italic;
+      color: #666;
+      margin-top: 3px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Publications -->
+  <section id="publications" class="section">
+    <h2 class="section-title">Publications</h2>
+    <p style="text-align:center;">
+      <em>
+        Total Citations: 63+, i10-index: 2 
+        (<a href="https://scholar.google.com/citations?hl=en&user=ylvGqngAAAAJ" target="_blank">Google Scholar</a>) | 
+        First/Co-First Author on 11 Publications | Corresponding Author(*) on 2 Papers
+      </em>
+    </p>
+
+    <!-- Filters -->
+    <div class="publication-filters">
+      <button class="filter-btn active">All</button>
+      <button class="filter-btn">2025</button>
+      <button class="filter-btn">2024</button>
+      <button class="filter-btn">2023</button>
+      <button class="filter-btn">Journals</button>
+      <button class="filter-btn">Conferences</button>
+      <button class="filter-btn">Book Chapters</button>
+    </div>
+
+    <!-- Journal Papers -->
+    <div class="publication-item" data-year="2025" data-type="journal">
+      <div class="publication-badge">2025</div>
+      <div class="publication-title">
+        <a href="https://doi.org/10.1109/ACCESS.2025.3541059" target="_blank">
+          DeepGuard: Enhancing Violence Detection in Smart Cities through Deep Learning
+        </a>
       </div>
-    </nav>
+      <div class="publication-authors"><strong>Md. Al-Mamun Provath</strong>, M. Rahman, et al.</div>
+      <div class="publication-venue">IEEE Access (IF: 3.9)</div>
+    </div>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-      <div class="hero-container">
-        <div class="hero-content">
-          <h1>Md. Al-Mamun Provath</h1>
-          <div class="hero-subtitle">Researcher & Lecturer</div>
-          <div class="hero-university">Chittagong University of Engineering & Technology</div>
-          
-          <div class="hero-stats">
-            <div class="stat-item">
-              <span class="stat-number">11</span>
-              <div class="stat-label">Publications</div>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">63+</span>
-              <div class="stat-label">Citations</div>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">3.96</span>
-              <div class="stat-label">CGPA (1st/130)</div>
-            </div>
-          </div>
-          
-          <div class="hero-vision">
-            Advancing <strong>trustworthy multimodal AI</strong> systems that seamlessly integrate visual and linguistic understanding while ensuring robustness, interpretability, and ethical alignment.
-          </div>
-          
-          <div class="hero-cta">
-            <a href="#contact" class="cta-button cta-primary">Get In Touch</a>
-            <a href="https://al-mamunprovath17.github.io/data/Provath-CV.pdf" class="cta-button cta-secondary">Download CV</a>
-          </div>
-        </div>
-        
-        <img src="images/Provath.jpeg" alt="Md. Al-Mamun Provath" class="hero-image">
+    <div class="publication-item" data-year="2025" data-type="journal">
+      <div class="publication-badge">2025</div>
+      <div class="publication-title">
+        <a href="https://ieeexplore.ieee.org/document/10949191/" target="_blank">
+          Deep Learning-Based Image Watermarking using Catalan Transform and NMF
+        </a>
       </div>
-    </section>
+      <div class="publication-authors">F.H. Saikat, <strong>Md. Al-Mamun Provath</strong>, et al.</div>
+      <div class="publication-venue">IEEE Access (IF: 3.9)</div>
+    </div>
 
-    <!-- Research Interests -->
-    <section id="research" class="section">
-      <h2 class="section-title">Research Focus</h2>
-      <div class="research-grid">
-        <div class="research-card">
-          <div class="research-icon">🤖</div>
-          <div class="research-title">Multimodal Reasoning & LLMs</div>
-          <div class="research-description">
-            Developing robust vision-language models with enhanced interpretability and cross-modal understanding for next-generation AI systems.
-          </div>
-        </div>
-        
-        <div class="research-card">
-          <div class="research-icon">🛡️</div>
-          <div class="research-title">Trustworthy Computer Vision</div>
-          <div class="research-description">
-            Ensuring fairness, security, and robustness in real-world AI deployments across healthcare and surveillance domains.
-          </div>
-        </div>
-        
-        <div class="research-card">
-          <div class="research-icon">👥</div>
-          <div class="research-title">Human-Centered AI Systems</div>
-          <div class="research-description">
-            Bridging theoretical advances with practical applications through explainable AI and ethical design principles.
-          </div>
-        </div>
+    <div class="publication-item" data-year="2025" data-type="journal">
+      <div class="publication-badge">2025</div>
+      <div class="publication-title">
+        <a href="https://ieeexplore.ieee.org/document/10856108" target="_blank">
+          CAMFusion: Context-Aware Multi-Modal Fusion for Detecting Sarcasm & Humor
+        </a>
       </div>
-    </section>
+      <div class="publication-authors">M. Rahman, <strong>Md. Al-Mamun Provath</strong>, et al.</div>
+      <div class="publication-venue">IEEE Access (IF: 3.9)</div>
+    </div>
 
-    <!-- Publications -->
-    <section id="publications" class="section">
-      <h2 class="section-title">Selected Publications</h2>
-      
-      <div class="publication-filters">
-        <button class="filter-btn active">All</button>
-        <button class="filter-btn">2025</button>
-        <button class="filter-btn">Journals</button>
-        <button class="filter-btn">Conferences</button>
+    <div class="publication-item" data-year="2023" data-type="journal">
+      <div class="publication-badge">2023</div>
+      <div class="publication-title">
+        <a href="https://ieeexplore.ieee.org/document/10271288/" target="_blank">
+          Classification of Lung and Colon Cancer Histopathological Images
+        </a>
       </div>
-      
-      <div class="publication-item">
-        <div class="publication-badge">2025</div>
-        <div class="publication-title">
-          <a href="https://doi.org/10.1109/ACCESS.2025.3541059">DeepGuard: Enhancing Violence Detection in Smart Cities Through Deep Learning</a>
-        </div>
-        <div class="publication-authors"><strong>Md. Al-Mamun Provath</strong>, M. Rahman, Kaushik Deb, Pranab Kumar Dhar, Tetsuya Shimamura</div>
-        <div class="publication-venue">IEEE Access (IF: 3.9)</div>
-        <div class="publication-metrics">
-          <span class="metric-badge">92.86% Accuracy</span>
-          <span class="metric-badge">1.9M Parameters</span>
-        </div>
+      <div class="publication-authors"><strong>Md. Al-Mamun Provath</strong>, K. Deb, et al.</div>
+      <div class="publication-venue">IEEE Access (IF: 3.9)</div>
+    </div>
+
+    <div class="publication-item" data-year="2024" data-type="journal">
+      <div class="publication-badge">2024</div>
+      <div class="publication-title">
+        <a href="https://onlinelibrary.wiley.com/doi/full/10.1155/adce/8534390" target="_blank">
+          Strength Prediction of Geopolymer Concrete Using ANN
+        </a>
       </div>
-      
-      <div class="publication-item">
-        <div class="publication-badge">2025</div>
-        <div class="publication-title">
-          <a href="https://ieeexplore.ieee.org/document/10856108">CAMFusion: Context-Aware Multi-Modal Fusion Framework for Detecting Sarcasm and Humor</a>
-        </div>
-        <div class="publication-authors">M. Rahman, <strong>Md. Al-Mamun Provath</strong>, Kaushik Deb, Pranab Kumar Dhar, Tetsuya Shimamura</div>
-        <div class="publication-venue">IEEE Access (IF: 3.9)</div>
-        <div class="publication-metrics">
-          <span class="metric-badge">90% Accuracy</span>
-          <span class="metric-badge">Multimodal</span>
-        </div>
+      <div class="publication-authors">M.M. Islam, <strong>Md. Al-Mamun Provath</strong>, et al.</div>
+      <div class="publication-venue">Advances in Civil Engineering (IF: 1.8)</div>
+    </div>
+
+    <!-- Book Chapter -->
+    <div class="publication-item" data-year="2023" data-type="book">
+      <div class="publication-badge">2023</div>
+      <div class="publication-title">
+        <a href="https://link.springer.com/book/10.1007/978-981-99-4914-4" target="_blank">
+          Classification of Lung and Colon Cancer Using Deep Learning
+        </a>
       </div>
-      
-      <div class="publication-item">
-        <div class="publication-badge">2023</div>
-        <div class="publication-title">
-          <a href="https://ieeexplore.ieee.org/document/10271288/">Classification of Lung and Colon Cancer Histopathological Images Using Global Context Attention</a>
-        </div>
-        <div class="publication-authors"><strong>Md. Al-Mamun Provath</strong>, Kaushik Deb, Pranab Kumar Dhar, Tetsuya Shimamura</div>
-        <div class="publication-venue">IEEE Access (IF: 3.9)</div>
-        <div class="publication-metrics">
-          <span class="metric-badge">Medical AI</span>
-          <span class="metric-badge">Mobile Deployment</span>
-        </div>
+      <div class="publication-authors"><strong>Md. Al-Mamun Provath</strong>, K. Deb, et al.</div>
+      <div class="publication-venue">Springer, IW-FCV</div>
+    </div>
+
+    <!-- Conference Papers -->
+    <div class="publication-item" data-year="2025" data-type="conference">
+      <div class="publication-badge">2025</div>
+      <div class="publication-title">
+        Zero-Shot Face Recognition via Fine-Tuning CLIP with Contrastive Alignment
       </div>
-    </section>
+      <div class="publication-authors">M.K. Islam, ..., <strong>Md. Al-Mamun Provath*</strong>, et al.</div>
+      <div class="publication-venue">NCIM 2025, Gazipur, Bangladesh</div>
+    </div>
 
-    <!-- Contact -->
-    <section id="contact" class="contact-section">
-      <div class="contact-content">
-        <h2 class="contact-title">Let's Collaborate</h2>
-        <div class="contact-subtitle">
-          Open to research collaborations and PhD opportunities in AI/ML
-        </div>
-        
-        <div class="contact-links">
-          <a href="mailto:am.provath@cuet.ac.bd" class="contact-link">
-            📧 Email
-          </a>
-          <a href="https://scholar.google.com/citations?user=ylvGqngAAAAJ&hl=en&oi=sra" class="contact-link">
-            📚 Scholar
-          </a>
-          <a href="https://www.linkedin.com/in/al-mamun-provath-3020a821b" class="contact-link">
-            💼 LinkedIn
-          </a>
-          <a href="https://github.com/AL-MamunProvath17" class="contact-link">
-            💻 GitHub
-          </a>
-        </div>
+    <div class="publication-item" data-year="2024" data-type="conference">
+      <div class="publication-badge">2024</div>
+      <div class="publication-title">
+        <a href="https://ieeexplore.ieee.org/abstract/document/10595782/" target="_blank">
+          XAI-Driven Lightweight Multiscale ConvLSTM for Video Violence Detection
+        </a>
       </div>
-    </section>
+      <div class="publication-authors"><strong>Md. Al-Mamun Provath</strong>, K. Deb, et al.</div>
+      <div class="publication-venue">IEEE ISIE 2024</div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <p>&copy; 2025 Md. Al-Mamun Provath. Crafted for academic excellence.</p>
-    </footer>
+  <!-- Filtering Logic -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const publications = document.querySelectorAll(".publication-item");
 
-    <script>
-      // Smooth scroll for navigation links
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute('href'));
-          if (target) {
-            const offsetTop = target.offsetTop - 70;
-            window.scrollTo({
-              top: offsetTop,
-              behavior: 'smooth'
-            });
-          }
-        });
-      });
+      filterButtons.forEach(button => {
+        button.addEventListener("click", () => {
+          filterButtons.forEach(btn => btn.classList.remove("active"));
+          button.classList.add("active");
 
-      // Navbar background on scroll
-      window.addEventListener('scroll', () => {
-        const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 100) {
-          navbar.style.background = 'rgba(30, 27, 75, 0.98)';
-        } else {
-          navbar.style.background = 'rgba(30, 27, 75, 0.95)';
-        }
-      });
-
-      // Publication filters with improved logic
-      const filterBtns = document.querySelectorAll('.filter-btn');
-      const publications = document.querySelectorAll('.publication-item');
-
-      filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          // Remove active class from all buttons
-          filterBtns.forEach(b => b.classList.remove('active'));
-          // Add active class to clicked button
-          btn.classList.add('active');
-
-          const filter = btn.textContent.trim();
+          const filter = button.textContent.trim();
 
           publications.forEach(pub => {
-            const badge = pub.querySelector('.publication-badge');
-            const venue = pub.querySelector('.publication-venue');
-            const badgeText = badge ? badge.textContent.trim() : '';
-            const venueText = venue ? venue.textContent.trim() : '';
+            pub.style.display = "block"; // reset
 
-            let shouldShow = false;
+            if (filter !== "All") {
+              const year = pub.dataset.year;
+              const type = pub.dataset.type;
 
-            switch (filter) {
-              case 'All':
-                shouldShow = true;
-                break;
-              case '2025':
-                shouldShow = badgeText === '2025';
-                break;
-              case 'Journals':
-                shouldShow = venueText.includes('Access') || venueText.includes('Journal');
-                break;
-              case 'Conferences':
-                shouldShow = !venueText.includes('Access') && !venueText.includes('Journal');
-                break;
-              default:
-                shouldShow = true;
-            }
-
-            // Smooth transition
-            if (shouldShow) {
-              pub.style.display = 'block';
-              pub.style.opacity = '0';
-              pub.style.transform = 'translateY(20px)';
-              setTimeout(() => {
-                pub.style.opacity = '1';
-                pub.style.transform = 'translateY(0)';
-              }, 100);
-            } else {
-              pub.style.opacity = '0';
-              pub.style.transform = 'translateY(-20px)';
-              setTimeout(() => {
-                pub.style.display = 'none';
-              }, 300);
+              if (!(filter === year || filter.toLowerCase() === type)) {
+                pub.style.display = "none";
+              }
             }
           });
         });
       });
+    });
+  </script>
 
-      // Add entrance animations
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-          }
-        });
-      }, observerOptions);
-
-      // Observe all cards and sections
-      document.querySelectorAll('.research-card, .publication-item').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(50px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
-      });
-
-      // Mobile menu toggle (simplified)
-      const mobileToggle = document.querySelector('.mobile-menu-toggle');
-      const navMenu = document.querySelector('.nav-menu');
-
-      mobileToggle.addEventListener('click', () => {
-        navMenu.style.display = navMenu.style.display ===
+</body>
+</html>
