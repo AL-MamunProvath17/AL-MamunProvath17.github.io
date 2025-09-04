@@ -1,236 +1,746 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Md. Al-Mamun Provath - Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background: #222;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    nav a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    .section-title {
-      font-size: 26px;
-      margin-bottom: 20px;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 5px;
-    }
-    /* Research cards */
-    .research-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .research-card {
-      background: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    /* Publications */
-    .publication-filters {
-      margin-bottom: 20px;
-    }
-    .filter-btn {
-      margin: 5px;
-      padding: 6px 12px;
-      border: 1px solid #333;
-      background: #fff;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    .filter-btn.active {
-      background: #333;
-      color: #fff;
-    }
-    .publication-item {
-      background: #fff;
-      border: 1px solid #ddd;
-      padding: 15px;
-      border-radius: 8px;
-      margin-bottom: 15px;
-    }
-    .publication-badge {
-      font-weight: bold;
-      color: #555;
-    }
-    .publication-title a {
-      font-size: 18px;
-      font-weight: bold;
-      text-decoration: none;
-      color: #0073e6;
-    }
-    .publication-authors {
-      font-size: 14px;
-      margin: 5px 0;
-    }
-    .publication-venue {
-      font-style: italic;
-      margin-bottom: 5px;
-    }
-    .metric-badge {
-      display: inline-block;
-      background: #eee;
-      padding: 3px 8px;
-      margin-right: 5px;
-      border-radius: 12px;
-      font-size: 12px;
-    }
-    .hidden {
-      display: none;
-    }
-    footer {
-      background: #222;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-  </style>
-</head>
-<body>
-  <!-- Header -->
-  <header>
-    <h1>Md. Al-Mamun Provath</h1>
-    <nav>
-      <a href="#research">Research</a>
-      <a href="#publications">Publications</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <!-- Research Interests -->
-  <section id="research" class="section">
-    <h2 class="section-title">Research Interests</h2>
-    <div class="research-grid">
-      <div class="research-card">Deep Learning for Computer Vision</div>
-      <div class="research-card">Violence Detection in Videos</div>
-      <div class="research-card">Explainable AI</div>
-      <div class="research-card">Adversarial Machine Learning</div>
-    </div>
-  </section>
-
-  <!-- Publications -->
-  <section id="publications" class="section">
-    <h2 class="section-title">Selected Publications</h2>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Md. Al-Mamun Provath - Academic Portfolio</title>
+    <meta name="author" content="Md. Al-Mamun Provath">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
     
-    <div class="publication-filters">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="2025">2025</button>
-      <button class="filter-btn" data-filter="2024">2024</button>
-      <button class="filter-btn" data-filter="2023">2023</button>
-      <button class="filter-btn" data-filter="journals">Journals</button>
-      <button class="filter-btn" data-filter="conferences">Conferences</button>
-      <button class="filter-btn" data-filter="book">Book Chapters</button>
-    </div>
+    <style>
+      /* Modern Academic Portfolio Styles */
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+      
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        line-height: 1.6;
+        color: #2c3e50;
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        min-height: 100vh;
+      }
+      
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      
+      /* Header Section */
+      .header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 60px 0;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>') repeat;
+        background-size: 40px 40px;
+      }
+      
+      .header-content {
+        position: relative;
+        z-index: 2;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 40px;
+        align-items: center;
+      }
+      
+      .header-info h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+        background: linear-gradient(45deg, #fff, #e2e8f0);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      
+      .title {
+        font-size: 1.4rem;
+        font-weight: 500;
+        margin-bottom: 20px;
+        opacity: 0.95;
+      }
+      
+      .university {
+        font-size: 1.1rem;
+        margin-bottom: 25px;
+        opacity: 0.9;
+      }
+      
+      .research-vision {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        max-width: 600px;
+        opacity: 0.95;
+        margin-bottom: 30px;
+        font-weight: 400;
+      }
+      
+      .contact-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 30px;
+      }
+      
+      .contact-links a {
+        color: white;
+        text-decoration: none;
+        padding: 12px 24px;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 50px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+      }
+      
+      .contact-links a:hover {
+        background: rgba(255, 255, 255, 0.25);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      }
+      
+      .profile-image {
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+        border: 6px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+      
+      .profile-image:hover {
+        transform: scale(1.05);
+      }
+      
+      /* Main Content */
+      .main-content {
+        background: white;
+        margin: -30px 20px 0;
+        border-radius: 20px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        position: relative;
+        z-index: 3;
+      }
+      
+      /* Stats Section */
+      .stats-section {
+        padding: 40px;
+        border-bottom: 1px solid #e2e8f0;
+        background: linear-gradient(135deg, #f1f5f9 0%, #ffffff 100%);
+        border-radius: 20px 20px 0 0;
+      }
+      
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+        text-align: center;
+      }
+      
+      .stat-item {
+        padding: 20px;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease;
+      }
+      
+      .stat-item:hover {
+        transform: translateY(-5px);
+      }
+      
+      .stat-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #667eea;
+        display: block;
+      }
+      
+      .stat-label {
+        font-size: 1rem;
+        font-weight: 500;
+        color: #64748b;
+        margin-top: 5px;
+      }
+      
+      /* Section Styles */
+      .section {
+        padding: 50px 40px;
+      }
+      
+      .section-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 30px;
+        color: #1e293b;
+        position: relative;
+        padding-bottom: 15px;
+      }
+      
+      .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 4px;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        border-radius: 2px;
+      }
+      
+      /* Research Interests */
+      .research-interests {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 25px;
+        margin-top: 30px;
+      }
+      
+      .interest-item {
+        padding: 30px;
+        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        border-radius: 15px;
+        border-left: 5px solid #667eea;
+        transition: all 0.3s ease;
+      }
+      
+      .interest-item:hover {
+        transform: translateX(10px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+      
+      .interest-title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #1e293b;
+        margin-bottom: 12px;
+      }
+      
+      .interest-description {
+        color: #64748b;
+        line-height: 1.7;
+      }
+      
+      /* Publications */
+      .publication-item {
+        margin-bottom: 35px;
+        padding: 30px;
+        background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+        border-radius: 15px;
+        border: 1px solid #e2e8f0;
+        transition: all 0.3s ease;
+        position: relative;
+      }
+      
+      .publication-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        border-color: #667eea;
+      }
+      
+      .publication-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #1e293b;
+        margin-bottom: 15px;
+        line-height: 1.4;
+      }
+      
+      .publication-title a {
+        color: inherit;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      
+      .publication-title a:hover {
+        color: #667eea;
+      }
+      
+      .publication-authors {
+        color: #64748b;
+        margin-bottom: 10px;
+        font-weight: 500;
+      }
+      
+      .publication-venue {
+        color: #667eea;
+        font-weight: 600;
+        font-style: italic;
+        margin-bottom: 15px;
+      }
+      
+      .publication-description {
+        color: #475569;
+        line-height: 1.7;
+      }
+      
+      .publication-badge {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: #667eea;
+        color: white;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
+      
+      /* Experience Section */
+      .experience-item {
+        margin-bottom: 30px;
+        padding: 30px;
+        background: white;
+        border-radius: 15px;
+        border-left: 5px solid #667eea;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+      }
+      
+      .experience-header {
+        margin-bottom: 20px;
+      }
+      
+      .experience-title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #1e293b;
+        margin-bottom: 5px;
+      }
+      
+      .experience-company {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #667eea;
+        margin-bottom: 5px;
+      }
+      
+      .experience-duration {
+        color: #64748b;
+        font-weight: 500;
+      }
+      
+      .experience-achievements {
+        list-style: none;
+        margin-top: 15px;
+      }
+      
+      .experience-achievements li {
+        margin-bottom: 12px;
+        padding-left: 20px;
+        position: relative;
+        color: #475569;
+        line-height: 1.6;
+      }
+      
+      .experience-achievements li::before {
+        content: '▸';
+        position: absolute;
+        left: 0;
+        color: #667eea;
+        font-weight: bold;
+      }
+      
+      /* Awards Section */
+      .awards-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+      }
+      
+      .award-item {
+        padding: 25px;
+        background: linear-gradient(135deg, #fef3c7 0%, #fbbf24 100%);
+        border-radius: 15px;
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
+      
+      .award-item:hover {
+        transform: translateY(-5px);
+      }
+      
+      .award-title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #92400e;
+        margin-bottom: 10px;
+      }
+      
+      .award-year {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #b45309;
+      }
+      
+      /* Skills Section */
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+      }
+      
+      .skill-category {
+        padding: 25px;
+        background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        border-radius: 15px;
+        border-left: 5px solid #0ea5e9;
+      }
+      
+      .skill-title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #0c4a6e;
+        margin-bottom: 15px;
+      }
+      
+      .skill-list {
+        color: #0369a1;
+        line-height: 1.7;
+      }
+      
+      /* Footer */
+      .footer {
+        background: #1e293b;
+        color: white;
+        text-align: center;
+        padding: 30px 0;
+        margin-top: 50px;
+      }
+      
+      .footer p {
+        opacity: 0.8;
+      }
+      
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .header-content {
+          grid-template-columns: 1fr;
+          text-align: center;
+          gap: 30px;
+        }
+        
+        .header-info h1 {
+          font-size: 2.5rem;
+        }
+        
+        .profile-image {
+          width: 200px;
+          height: 200px;
+        }
+        
+        .stats-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        
+        .research-interests,
+        .awards-grid,
+        .skills-grid {
+          grid-template-columns: 1fr;
+        }
+        
+        .section {
+          padding: 30px 20px;
+        }
+        
+        .main-content {
+          margin: -30px 10px 0;
+        }
+      }
+    </style>
+  </head>
 
-    <!-- Example items -->
-    <div class="publication-item" data-year="2025" data-type="journals">
-      <div class="publication-badge">2025</div>
-      <div class="publication-title">
-        <a href="https://doi.org/10.1109/ACCESS.2025.3541059">DeepGuard: Enhancing Violence Detection in Smart Cities Through Deep Learning</a>
+  <body>
+    <!-- Header Section -->
+    <header class="header">
+      <div class="container">
+        <div class="header-content">
+          <div class="header-info">
+            <h1>Md. Al-Mamun Provath</h1>
+            <div class="title">Lecturer & AI Research Scholar</div>
+            <div class="university">Chittagong University of Engineering & Technology (CUET)</div>
+            <div class="research-vision">
+              Advancing <strong>trustworthy multimodal AI</strong> systems that seamlessly integrate visual and linguistic understanding while ensuring robustness, interpretability, and ethical alignment. Focused on developing next-generation AI that bridges theoretical innovation with real-world impact.
+            </div>
+            <div class="contact-links">
+              <a href="mailto:am.provath@cuet.ac.bd">📧 Email</a>
+              <a href="https://scholar.google.com/citations?user=ylvGqngAAAAJ&hl=en&oi=sra">📚 Scholar</a>
+              <a href="https://www.linkedin.com/in/al-mamun-provath-3020a821b">💼 LinkedIn</a>
+              <a href="https://github.com/AL-MamunProvath17">💻 GitHub</a>
+              <a href="https://al-mamunprovath17.github.io/data/Provath-CV.pdf">📄 CV</a>
+            </div>
+          </div>
+          <img src="images/Provath.jpeg" alt="Md. Al-Mamun Provath" class="profile-image">
+        </div>
       </div>
-      <div class="publication-authors"><strong>Md. Al-Mamun Provath</strong>, M. Rahman, et al.</div>
-      <div class="publication-venue">IEEE Access (IF: 3.9)</div>
-      <div class="publication-metrics">
-        <span class="metric-badge">92.86% Accuracy</span>
-        <span class="metric-badge">1.9M Parameters</span>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Stats Section -->
+      <section class="stats-section">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-number">11</span>
+            <div class="stat-label">Publications</div>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">63+</span>
+            <div class="stat-label">Citations</div>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">3.96</span>
+            <div class="stat-label">GPA (1st/130)</div>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">3</span>
+            <div class="stat-label">Teaching Excellence</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Research Interests -->
+      <section class="section">
+        <h2 class="section-title">Research Interests</h2>
+        <div class="research-interests">
+          <div class="interest-item">
+            <div class="interest-title">🤖 Multimodal Reasoning & LLMs</div>
+            <div class="interest-description">
+              Developing robust vision-language models with enhanced interpretability and cross-modal understanding for next-generation AI systems.
+            </div>
+          </div>
+          <div class="interest-item">
+            <div class="interest-title">🛡️ Trustworthy Computer Vision</div>
+            <div class="interest-description">
+              Ensuring fairness, security, and robustness in real-world AI deployments across healthcare and surveillance domains.
+            </div>
+          </div>
+          <div class="interest-item">
+            <div class="interest-title">👥 Human-Centered AI Systems</div>
+            <div class="interest-description">
+              Bridging theoretical advances with practical applications through explainable AI and ethical design principles.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section class="section">
+        <h2 class="section-title">Education</h2>
+        
+        <div class="experience-item">
+          <div class="experience-header">
+            <div class="experience-title">M.Sc. in Computer Science and Engineering</div>
+            <div class="experience-company">Chittagong University of Engineering and Technology (CUET)</div>
+            <div class="experience-duration">Jul 2023 – May 2025</div>
+          </div>
+          <ul class="experience-achievements">
+            <li><strong>GPA:</strong> 3.88/4.00 (with Honors)</li>
+            <li><strong>Thesis Focus:</strong> Violence Detection in Videos Using Deep Learning</li>
+            <li><strong>Supervised by:</strong> Prof. Kaushik Deb</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-header">
+            <div class="experience-title">B.Sc. in Computer Science and Engineering</div>
+            <div class="experience-company">Chittagong University of Engineering and Technology (CUET)</div>
+            <div class="experience-duration">Jan 2018 – Jul 2023</div>
+          </div>
+          <ul class="experience-achievements">
+            <li><strong>GPA:</strong> 3.96/4.00 (with Honors)</li>
+            <li><strong>Merit Position:</strong> 1st among 130 students</li>
+            <li><strong>Achievement:</strong> University Gold Medal recipient</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Publications -->
+      <section class="section">
+        <h2 class="section-title">Selected Publications</h2>
+        <div style="margin-bottom: 30px; padding: 20px; background: #f1f5f9; border-radius: 10px; text-align: center;">
+          <strong>Total Citations: 63+ | i10-index: 2 | First/Co-First Author on 11 Publications</strong>
+        </div>
+
+        <!-- Journal Papers -->
+        <h3 style="font-size: 1.5rem; margin-bottom: 25px; color: #1e293b;">📄 Journal Papers</h3>
+        
+        <div class="publication-item">
+          <div class="publication-badge">2025</div>
+          <div class="publication-title">
+            <a href="https://doi.org/10.1109/ACCESS.2025.3541059">DeepGuard: Enhancing Violence Detection in Smart Cities Through Deep Learning</a>
+          </div>
+          <div class="publication-authors"><strong>Md. Al-Mamun Provath</strong>, M. Rahman, Kaushik Deb, Pranab Kumar Dhar, Tetsuya Shimamura</div>
+          <div class="publication-venue">IEEE Access (IF: 3.9)</div>
+          <div class="publication-description">
+            Introduced <strong>DeepGuard</strong>, a comprehensive system for video violence detection in smart cities, with particular focus on political violence. Achieved <strong>92.86% accuracy</strong> with just 1.9M parameters using fine-tuned MoViNet-A0 and custom keyframe extraction.
+          </div>
+        </div>
+
+        <div class="publication-item">
+          <div class="publication-badge">2025</div>
+          <div class="publication-title">
+            <a href="https://ieeexplore.ieee.org/document/10856108">CAMFusion: Context-Aware Multi-Modal Fusion Framework for Detecting Sarcasm and Humor</a>
+          </div>
+          <div class="publication-authors">M. Rahman, <strong>Md. Al-Mamun Provath</strong>, Kaushik Deb, Pranab Kumar Dhar, Tetsuya Shimamura</div>
+          <div class="publication-venue">IEEE Access (IF: 3.9)</div>
+          <div class="publication-description">
+            Presented <strong>CAMFusion</strong>, a context-aware multi-modal fusion framework for detecting sarcasm and humor in Bangla videos. Achieved <strong>90% accuracy</strong> by integrating visual features with textual features processed via BiLSTM and GRU.
+          </div>
+        </div>
+
+        <div class="publication-item">
+          <div class="publication-badge">2023</div>
+          <div class="publication-title">
+            <a href="https://ieeexplore.ieee.org/document/10271288/">Classification of Lung and Colon Cancer Histopathological Images Using Global Context Attention</a>
+          </div>
+          <div class="publication-authors"><strong>Md. Al-Mamun Provath</strong>, Kaushik Deb, Pranab Kumar Dhar, Tetsuya Shimamura</div>
+          <div class="publication-venue">IEEE Access (IF: 3.9)</div>
+          <div class="publication-description">
+            Developed a global context attention-guided CNN that significantly improved cancer classification accuracy while reducing computational costs, making the model highly suitable for mobile deployment.
+          </div>
+        </div>
+
+        <!-- Conference Papers -->
+        <h3 style="font-size: 1.5rem; margin: 40px 0 25px 0; color: #1e293b;">🎯 Selected Conference Papers</h3>
+        
+        <div class="publication-item">
+          <div class="publication-badge">2024</div>
+          <div class="publication-title">
+            <a href="https://ieeexplore.ieee.org/abstract/document/10595782/">XAI-Driven Lightweight Multiscale ConvLSTM Architecture for Video Violence Detection</a>
+          </div>
+          <div class="publication-authors"><strong>Md. Al-Mamun Provath</strong>, Kaushik Deb, Kang-Hyun Jo</div>
+          <div class="publication-venue">IEEE ISIE 2024</div>
+          <div class="publication-description">
+            Introduced a novel deep neural network architecture with multiscale ConvLSTM and EvoNorm-S0, achieving 92.40% accuracy with 5ms processing time, optimizing both accuracy and computational efficiency.
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section class="section">
+        <h2 class="section-title">Research & Teaching Experience</h2>
+
+        <div class="experience-item">
+          <div class="experience-header">
+            <div class="experience-title">Lecturer & Research Supervisor</div>
+            <div class="experience-company">Chittagong University of Engineering and Technology (CUET)</div>
+            <div class="experience-duration">Nov 2023 – Present</div>
+          </div>
+          <ul class="experience-achievements">
+            <li><strong>Research Mentorship:</strong> Supervised 3 undergraduate theses, producing 1 peer-reviewed publication and 2 ongoing projects in LLM reasoning with 100% thesis completion rate</li>
+            <li><strong>Teaching Excellence:</strong> Delivered 4 courses (OOP, Compiler Design, Software Engineering, Digital Image Processing) to 400+ students with 4.8/5.0 average evaluation scores</li>
+            <li><strong>Course Development:</strong> Redesigned curriculum for modern AI/ML integration</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-header">
+            <div class="experience-title">AI/ML Instructor</div>
+            <div class="experience-company">BDSET Project, Bangladesh Hi-Tech Park Authority</div>
+            <div class="experience-duration">Dec 2024 – May 2025</div>
+          </div>
+          <ul class="experience-achievements">
+            <li>Delivered comprehensive training on Python, ML, and Deep Learning to 100+ participants with 98% satisfaction rating</li>
+            <li>Developed hands-on curriculum for government professionals in emerging technologies</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-header">
+            <div class="experience-title">Technical Mentor</div>
+            <div class="experience-company">Enhancing Digital Government and Economy (EDGE) Project</div>
+            <div class="experience-duration">Nov 2024 – Feb 2025</div>
+          </div>
+          <ul class="experience-achievements">
+            <li>Led Django Web Framework training for 50+ government developers, contributing to national digital transformation initiative</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Honors & Awards -->
+      <section class="section">
+        <h2 class="section-title">Honors & Awards</h2>
+        <div class="awards-grid">
+          <div class="award-item">
+            <div class="award-title">🥇 University Gold Medal</div>
+            <div class="award-year">Highest CGPA (1/740) - 2023</div>
+          </div>
+          <div class="award-item">
+            <div class="award-title">🌟 Dean's Award</div>
+            <div class="award-year">Academic Excellence - 2023, 2025</div>
+          </div>
+          <div class="award-item">
+            <div class="award-title">🎓 UGC Merit Scholarship</div>
+            <div class="award-year">Outstanding Performance - 2022</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="section">
+        <h2 class="section-title">Technical Skills & Research Expertise</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <div class="skill-title">🤖 AI/ML Research (Expert)</div>
+            <div class="skill-list">PyTorch, TensorFlow, LLM Fine-tuning, Multimodal Fusion, Transformer Architectures, GANs, Computer Vision</div>
+          </div>
+          <div class="skill-category">
+            <div class="skill-title">💻 Programming (Advanced)</div>
+            <div class="skill-list">Python, Java, C/C++, Git, Linux, Docker, LaTeX</div>
+          </div>
+          <div class="skill-category">
+            <div class="skill-title">🔬 Specialized Domains</div>
+            <div class="skill-list">Medical Image Analysis, Video Understanding, Cross-Modal Learning, Explainable AI</div>
+          </div>
+          <div class="skill-category">
+            <div class="skill-title">📊 Data Science Pipeline</div>
+            <div class="skill-list">Pandas, NumPy, scikit-learn, Statistical Analysis, Large-Scale Data Processing</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Leadership & Service -->
+      <section class="section">
+        <h2 class="section-title">Leadership & Professional Service</h2>
+        <div class="experience-item">
+          <ul class="experience-achievements">
+            <li><strong>Moderator,</strong> CUET Computer Club - Leading 50+ members in research initiatives (Jul 2025–Present)</li>
+            <li><strong>Reviewer,</strong> Artificial Intelligence Review (Springer, IF: 9.6) - 2025</li>
+            <li><strong>Organizing Committee Member,</strong> IEEE ECCE Conference - Feb 2025</li>
+            <li><strong>Research Coordinator,</strong> CUET Computer Club - 2022</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 Md. Al-Mamun Provath. Designed for academic excellence and research impact.</p>
+        <p style="margin-top: 10px; font-size: 0.9rem;">
+          Website design inspired by modern academic portfolios. 
+          <a href="https://scholar.google.com/citations?user=ylvGqngAAAAJ" style="color: #60a5fa;">View Google Scholar Profile</a>
+        </p>
       </div>
-    </div>
-
-    <div class="publication-item" data-year="2025" data-type="journals">
-      <div class="publication-badge">2025</div>
-      <div class="publication-title">
-        <a href="https://ieeexplore.ieee.org/document/10856108">CAMFusion: Context-Aware Multi-Modal Fusion Framework</a>
-      </div>
-      <div class="publication-authors">M. Rahman, <strong>Md. Al-Mamun Provath</strong>, et al.</div>
-      <div class="publication-venue">IEEE Access (IF: 3.9)</div>
-    </div>
-
-    <div class="publication-item" data-year="2023" data-type="journals">
-      <div class="publication-badge">2023</div>
-      <div class="publication-title">
-        <a href="https://ieeexplore.ieee.org/document/10271288/">Classification of Lung and Colon Cancer Histopathological Images</a>
-      </div>
-      <div class="publication-authors"><strong>Md. Al-Mamun Provath</strong>, K. Deb, et al.</div>
-      <div class="publication-venue">IEEE Access (IF: 3.9)</div>
-    </div>
-
-    <div class="publication-item" data-year="2025" data-type="conferences">
-      <div class="publication-badge">2025</div>
-      <div class="publication-title">
-        Zero-Shot Face Recognition via Fine-Tuning CLIP with Contrastive Alignment
-      </div>
-      <div class="publication-authors">M.K. Islam, ..., <strong>Md. Al-Mamun Provath*</strong>, et al.</div>
-      <div class="publication-venue">NCIM 2025</div>
-    </div>
-
-    <div class="publication-item" data-year="2023" data-type="book">
-      <div class="publication-badge">2023</div>
-      <div class="publication-title">
-        <a href="https://link.springer.com/book/10.1007/978-981-99-4914-4">Classification of Lung and Colon Cancer Using Deep Learning</a>
-      </div>
-      <div class="publication-authors"><strong>Md. Al-Mamun Provath</strong>, K. Deb, et al.</div>
-      <div class="publication-venue">Springer Book Chapter</div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="section">
-    <h2 class="section-title">Contact</h2>
-    <p>Email: provath@example.com</p>
-    <p>LinkedIn: <a href="#">linkedin.com/in/provath</a></p>
-    <p>Google Scholar: <a href="https://scholar.google.com/citations?hl=en&user=ylvGqngAAAAJ">View Profile</a></p>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Md. Al-Mamun Provath. All rights reserved.</p>
-  </footer>
-
-  <!-- JS for filters -->
-  <script>
-    const filterButtons = document.querySelectorAll(".filter-btn");
-    const publications = document.querySelectorAll(".publication-item");
-
-    filterButtons.forEach(btn => {
-      btn.addEventListener("click", () => {
-        filterButtons.forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-
-        const filter = btn.getAttribute("data-filter");
-
-        publications.forEach(item => {
-          item.classList.remove("hidden");
-          const year = item.dataset.year;
-          const type = item.dataset.type;
-
-          if (filter !== "all" && filter !== year && filter !== type) {
-            item.classList.add("hidden");
-          }
-        });
-      });
-    });
-  </script>
-</body>
+    </footer>
+  </body>
 </html>
