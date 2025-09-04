@@ -2,315 +2,325 @@
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Md. Al-Mamun Provath - Academic Portfolio</title>
+
+    <title>Md. Al-Mamun Provath</title>
+
     <meta name="author" content="Md. Al-Mamun Provath">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        font-family: 'Inter', sans-serif;
-        line-height: 1.6;
-        color: #2c3e50;
-        background: #f9fafb;
-        scroll-behavior: smooth;
-      }
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-
-      /* Navbar */
-      .navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background: #1e293b;
-        color: white;
-        padding: 15px 0;
-        z-index: 1000;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-      }
-      .navbar .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .navbar h2 {
-        font-size: 1.2rem;
-        font-weight: 600;
-        color: #f1f5f9;
-      }
-      .nav-links {
-        display: flex;
-        gap: 20px;
-      }
-      .nav-links a {
-        color: #e2e8f0;
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.3s ease;
-      }
-      .nav-links a:hover {
-        color: #60a5fa;
-      }
-
-      /* Header */
-      .header {
-        background: linear-gradient(135deg, #3b82f6, #6366f1);
-        color: white;
-        padding: 120px 0 60px;
-        margin-top: 60px; /* Space for fixed navbar */
-      }
-      .header-content {
-        display: grid;
-        grid-template-columns: 1fr auto;
-        gap: 40px;
-        align-items: center;
-      }
-      .header-info h1 {
-        font-size: 3rem;
-        font-weight: 700;
-        margin-bottom: 15px;
-      }
-      .title {
-        font-size: 1.3rem;
-        margin-bottom: 15px;
-      }
-      .university {
-        font-size: 1.1rem;
-        margin-bottom: 20px;
-      }
-      .research-vision {
-        max-width: 600px;
-        margin-bottom: 20px;
-        opacity: 0.95;
-      }
-      .contact-links {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 15px;
-        margin-top: 20px;
-      }
-      .contact-links a {
-        color: white;
-        text-decoration: none;
-        padding: 10px 20px;
-        background: rgba(255, 255, 255, 0.15);
-        border-radius: 30px;
-        transition: 0.3s;
-      }
-      .contact-links a:hover {
-        background: rgba(255, 255, 255, 0.3);
-      }
-      .profile-image {
-        width: 250px;
-        height: 250px;
-        border-radius: 50%;
-        border: 5px solid rgba(255, 255, 255, 0.2);
-        object-fit: cover;
-        box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-      }
-
-      /* Sections */
-      .main-content {
-        background: white;
-        margin: -40px 20px 0;
-        border-radius: 20px;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-      }
-      .section {
-        padding: 50px 40px;
-      }
-      .section-title {
-        font-size: 2rem;
-        font-weight: 700;
-        margin-bottom: 30px;
-        color: #1e293b;
-      }
-
-      /* Footer */
-      .footer {
-        background: #1e293b;
-        color: white;
-        text-align: center;
-        padding: 30px 20px;
-        margin-top: 50px;
-      }
-
-      /* Responsive */
-      @media(max-width:768px) {
-        .header-content {
-          grid-template-columns: 1fr;
-          text-align: center;
-        }
-        .profile-image {
-          margin: 0 auto;
-        }
-        .nav-links {
-          flex-wrap: wrap;
-          justify-content: center;
-        }
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    
   </head>
 
   <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-      <div class="container">
-        <h2>Provath</h2>
-        <div class="nav-links">
-          <a href="#research">Research</a>
-          <a href="#education">Education</a>
-          <a href="#publications">Publications</a>
-          <a href="#experience">Experience</a>
-          <a href="#awards">Awards</a>
-          <a href="#contact">Contact</a>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Header -->
-    <header class="header">
-      <div class="container header-content">
-        <div class="header-info">
-          <h1>Md. Al-Mamun Provath</h1>
-          <div class="title">Lecturer & AI Research Scholar</div>
-          <div class="university">Chittagong University of Engineering & Technology (CUET)</div>
-          <div class="research-vision">
-            Advancing <strong>trustworthy multimodal AI</strong> systems that integrate visual and linguistic understanding while ensuring robustness, interpretability, and ethics.
-          </div>
-          <div class="contact-links" id="contact">
-            <a href="mailto:am.provath@cuet.ac.bd">📧 Email</a>
-            <a href="https://scholar.google.com/citations?user=ylvGqngAAAAJ&hl=en&oi=sra">📚 Scholar</a>
-            <a href="https://www.linkedin.com/in/al-mamun-provath-3020a821b">💼 LinkedIn</a>
-            <a href="https://github.com/AL-MamunProvath17">💻 GitHub</a>
-            <a href="https://al-mamunprovath17.github.io/data/Provath-CV.pdf">📄 CV</a>
-          </div>
-        </div>
-        <img src="images/Provath.jpeg" alt="Md. Al-Mamun Provath" class="profile-image">
-      </div>
-    </header>
-
-    <!-- Main Content -->
-    <main class="main-content">
-      <section class="section" id="research">
-       <h2 class="section-title">Research Interests</h2> <div class="research-interests"> <div class="interest-item"> <div class="interest-title">🤖 Multimodal Reasoning & LLMs</div> <div class="interest-description"> Developing robust vision-language models with enhanced interpretability and cross-modal understanding for next-generation AI systems. </div> </div> <div class="interest-item"> <div class="interest-title">🛡️ Trustworthy Computer Vision</div> <div class="interest-description"> Ensuring fairness, security, and robustness in real-world AI deployments across healthcare and surveillance domains. </div> </div> <div class="interest-item"> <div class="interest-title">👥 Human-Centered AI Systems</div> <div class="interest-description"> Bridging theoretical advances with practical applications through explainable AI and ethical design principles. </div> </div> </div>
-      </section>
-
-     <section class="section" id="education">
-  <h2 class="section-title">Education</h2>
-  
-  <!-- Master's Degree -->
-  <div class="experience-item">
-    <div class="experience-header">
-      <div class="experience-title">M.Sc. in Computer Science and Engineering</div>
-      <div class="experience-company">Chittagong University of Engineering and Technology (CUET)</div>
-      <div class="experience-duration">Jul 2023 – May 2025</div>
-    </div>
-    <ul class="experience-achievements">
-      <li><strong>CGPA:</strong> 3.88/4.00 (with Honors)</li>
-      <li><strong>Thesis Focus:</strong> Violence Detection in Videos Using Deep Learning</li>
-      <li><strong>Supervised by:</strong> Prof. Kaushik Deb</li>
-    </ul>
-  </div>
-
-  <!-- Bachelor's Degree -->
-  <div class="experience-item">
-    <div class="experience-header">
-      <div class="experience-title">B.Sc. in Computer Science and Engineering</div>
-      <div class="experience-company">Chittagong University of Engineering and Technology (CUET)</div>
-      <div class="experience-duration">Jan 2018 – Jul 2023</div>
-    </div>
-    <ul class="experience-achievements">
-      <li><strong>CGPA:</strong> 3.96/4.00 (with Honors)</li>
-      <li><strong>Merit Position:</strong> 1st among 130 students</li>
-      <li><strong>Achievement:</strong> University Gold Medal recipient</li>
-    </ul>
-  </div>
-</section>
+    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr style="padding:0px">
+              <td style="padding:2.5%;width:63%;vertical-align:middle">
+                <p class="name" style="text-align: center;">
+                  Md. Al-Mamun Provath
+                  
+                <p>
+  I’m a Lecturer at <a href="https://cuet.ac.bd/">Chittagong University of Engineering & Technology (CUET)</a>, where I also completed both my B.Sc. (1st in class) and M.Sc. in Computer Science and Engineering under the supervision of <a href="https://scholar.google.com/citations?user=du_bCPIAAAAJ&hl=en&oi=sra">Prof. Kaushik Deb</a>.
+</p>
 
 
-      <section class="section" id="publications">
-       <h2 class="section-title">Selected Publications</h2> <div style="margin-bottom: 30px; padding: 20px; background: #f1f5f9; border-radius: 10px; text-align: center;"> <strong>Total Citations: 63+ | i10-index: 2 | First/Co-First Author on 11 Publications</strong> </div> <!-- Journal Papers --> <h3 style="font-size: 1.5rem; margin-bottom: 25px; color: #1e293b;">📄 Journal Papers</h3> <div class="publication-item"> <div class="publication-badge">2025</div> <div class="publication-title"> <a href="https://doi.org/10.1109/ACCESS.2025.3541059">DeepGuard: Enhancing Violence Detection in Smart Cities Through Deep Learning</a> </div> <div class="publication-authors"><strong>Md. Al-Mamun Provath</strong>, M. Rahman, Kaushik Deb, Pranab Kumar Dhar, Tetsuya Shimamura</div> <div class="publication-venue">IEEE Access (IF: 3.9)</div> <div class="publication-description"> Introduced <strong>DeepGuard</strong>, a comprehensive system for video violence detection in smart cities, with particular focus on political violence. Achieved <strong>92.86% accuracy</strong> with just 1.9M parameters using fine-tuned MoViNet-A0 and custom keyframe extraction. </div> </div> <div class="publication-item"> <div class="publication-badge">2025</div> <div class="publication-title"> <a href="https://ieeexplore.ieee.org/document/10856108">CAMFusion: Context-Aware Multi-Modal Fusion Framework for Detecting Sarcasm and Humor</a> </div> <div class="publication-authors">M. Rahman, <strong>Md. Al-Mamun Provath</strong>, Kaushik Deb, Pranab Kumar Dhar, Tetsuya Shimamura</div> <div class="publication-venue">IEEE Access (IF: 3.9)</div> <div class="publication-description"> Presented <strong>CAMFusion</strong>, a context-aware multi-modal fusion framework for detecting sarcasm and humor in Bangla videos. Achieved <strong>90% accuracy</strong> by integrating visual features with textual features processed via BiLSTM and GRU. </div> </div> <div class="publication-item"> <div class="publication-badge">2023</div> <div class="publication-title"> <a href="https://ieeexplore.ieee.org/document/10271288/">Classification of Lung and Colon Cancer Histopathological Images Using Global Context Attention</a> </div> <div class="publication-authors"><strong>Md. Al-Mamun Provath</strong>, Kaushik Deb, Pranab Kumar Dhar, Tetsuya Shimamura</div> <div class="publication-venue">IEEE Access (IF: 3.9)</div> <div class="publication-description"> Developed a global context attention-guided CNN that significantly improved cancer classification accuracy while reducing computational costs, making the model highly suitable for mobile deployment. </div> </div> <!-- Conference Papers --> <h3 style="font-size: 1.5rem; margin: 40px 0 25px 0; color: #1e293b;">🎯 Selected Conference Papers</h3> <div class="publication-item"> <div class="publication-badge">2024</div> <div class="publication-title"> <a href="https://ieeexplore.ieee.org/abstract/document/10595782/">XAI-Driven Lightweight Multiscale ConvLSTM Architecture for Video Violence Detection</a> </div> <div class="publication-authors"><strong>Md. Al-Mamun Provath</strong>, Kaushik Deb, Kang-Hyun Jo</div> <div class="publication-venue">IEEE ISIE 2024</div> <div class="publication-description"> Introduced a novel deep neural network architecture with multiscale ConvLSTM and EvoNorm-S0, achieving 92.40% accuracy with 5ms processing time, optimizing both accuracy and computational efficiency. </div> </div>
-      </section>
+                <p style="text-align:center">
+                  <a href="mailto:am.provath@cuet.ac.bd">Email</a> &nbsp;/&nbsp;
+                  <a href="data/Provath-CV.pdf">CV</a> &nbsp;/&nbsp;
+                  <a href="data/Provath-bio.txt">Bio</a> &nbsp;/&nbsp;
+                  <a href="https://scholar.google.com/citations?user=ylvGqngAAAAJ&hl=en&oi=sra">Scholar</a> &nbsp;/&nbsp;
+                  <a href="https://www.linkedin.com/in/al-mamun-provath-3020a821b">LinkedIn</a> &nbsp;/&nbsp;
+                  <a href="https://github.com/AL-MamunProvath17">Github</a>
+                </p>
+              </td>
+              <td style="padding:2.5%;width:40%;max-width:40%">
+                <a href="images/Provath.jpeg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/Provath.jpeg" class="hoverZoomLink"></a>
+              </td>
+            </tr>
+                   <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-      <section class="section" id="experience">
-  <h2 class="section-title">Research & Teaching Experience</h2>
 
-  <!-- Lecturer -->
-  <div class="experience-item">
-    <div class="experience-header">
-      <div class="experience-title">Lecturer & Research Supervisor</div>
-      <div class="experience-company">Chittagong University of Engineering and Technology (CUET)</div>
-      <div class="experience-duration">Nov 2023 – Present</div>
-    </div>
-  </div>
 
-  <!-- Instructor -->
-  <div class="experience-item">
-    <div class="experience-header">
-      <div class="experience-title">AI/ML Instructor</div>
-      <div class="experience-company">BDSET Project, Bangladesh Hi-Tech Park Authority</div>
-      <div class="experience-duration">Dec 2024 – May 2025</div>
-    </div>
-  </div>
 
-  <!-- Mentor -->
-  <div class="experience-item">
-    <div class="experience-header">
-      <div class="experience-title">Technical Mentor</div>
-      <div class="experience-company">Enhancing Digital Government and Economy (EDGE) Project</div>
-      <div class="experience-duration">Nov 2024 – Feb 2025</div>
-    </div>
-  </div>
-</section>
 
-<section class="section" id="awards">
-  <h2 class="section-title">Honors & Awards</h2>
-  <div class="awards-grid">
 
-    <div class="award-item">
-      <div class="award-title">🥇 University Gold Medal</div>
-      <div class="award-year">Highest CGPA (1/740) - 2023</div>
-    </div>
 
-    <div class="award-item">
-      <div class="award-title">🌟 Dean's Award</div>
-      <div class="award-year">Academic Excellence - 2023, 2025</div>
-    </div>
 
-    <div class="award-item">
-      <div class="award-title">🎓 UGC Merit Scholarship</div>
-      <div class="award-year">Outstanding Performance - 2022</div>
-    </div>
 
-  </div>
-</section>
 
-    </main>
+            <!-- 2025 IEEE Access Paper -->
+            <tr onmouseout="nerfcasting_stop()" onmouseover="nerfcasting_start()">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='nerfcasting_image'>
+                    <img src='images/matrix.PNG' width="100%">
+                  </div>
+                </div>
+                
+                <script type="text/javascript">
+                  function nerfcasting_start() {
+                    document.getElementById('nerfcasting_image').style.opacity = "1";
+                  }
+        
+                  function nerfcasting_stop() {
+                    document.getElementById('nerfcasting_image').style.opacity = "0";
+                  }
+                  nerfcasting_stop()
+                </script>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <a href="https://ieeexplore.ieee.org/abstract/document/10949191">
+                  <span class="papertitle">Deep Learning-Based Image Watermarking Using Catalan Transform and Non-Negative Matrix Factorization</span>
+                </a>
+                <br>
+                M. Fahim Hossain Saikat,
+                <strong>Md. Al-Mamun Provath</strong>,
+                <a href="https://scholar.google.com/citations?user=du_bCPIAAAAJ&hl=en&oi=sra">Kaushik Deb</a>,
+                <a href="https://scholar.google.com/citations?user=L2Ra8yMAAAAJ&hl=en&oi=sra">Pranab Kumar Dhar</a>,
+                <a href="https://ieeexplore.ieee.org/author/37271969400">Tetsuya Shimamura</a>.
+                <br>
+                <em>IEEE Access</em>, 2025
+                <br>
+                <p></p>
+                <p>
+                  This study proposes a novel deep learning-based image watermarking method that integrates the <strong>Catalan transform (CT)</strong>, <strong>non-negative matrix factorization (NMF)</strong>, and an <strong>artificial neural network (ANN)</strong> in the YIQ color space. The approach enhances imperceptibility, robustness, and security while reducing computational complexity. Experimental results show PSNR up to 77.02 dB, SSIM of 1.00, and NC of 1.00, with superior performance and 33.33% lower complexity compared to traditional methods.
+                </p>
+              </td>
+            </tr>
 
-    <!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <p>&copy; 2025 Md. Al-Mamun Provath. Designed for academic excellence and research impact.</p>
-    <p class="footer-note">
-      Website design inspired by modern academic portfolios. 
-      <a href="https://scholar.google.com/citations?user=ylvGqngAAAAJ" class="footer-link">
-        View Google Scholar Profile
-      </a>
-    </p>
-  </div>
-</footer>
 
-  </body>
-</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- 2025 IEEE Access Paper - DeepGuard -->
+            <tr onmouseout="nerfcasting_stop()" onmouseover="nerfcasting_start()">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='nerfcasting_image'>
+                    <img src='images/deepguard.PNG' width="100%">
+                  </div>
+                </div>
+                
+                <script type="text/javascript">
+                  function nerfcasting_start() {
+                    document.getElementById('nerfcasting_image').style.opacity = "1";
+                  }
+        
+                  function nerfcasting_stop() {
+                    document.getElementById('nerfcasting_image').style.opacity = "0";
+                  }
+                  nerfcasting_stop()
+                </script>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <a href="https://ieeexplore.ieee.org/abstract/document/10879503">
+                  <span class="papertitle">DeepGuard: Enhancing Violence Detection in Smart Cities Through Deep Learning</span>
+                </a>
+                <br>
+                <strong>Md. Al-Mamun Provath</strong>, 
+                M. Rahman,
+                <a href="https://scholar.google.com/citations?user=du_bCPIAAAAJ&hl=en&oi=sra">Kaushik Deb</a>, 
+                <a href="https://scholar.google.com/citations?user=L2Ra8yMAAAAJ&hl=en&oi=sra">Pranab Kumar Dhar</a>, 
+                <a href="https://ieeexplore.ieee.org/author/37271969400">Tetsuya Shimamura</a>.
+                <br>
+                <em>IEEE Access</em>, 2025
+                <br>
+                <p></p>
+                <p>
+                  This work introduces <strong>DeepGuard</strong>, a comprehensive system for video violence detection in smart cities, with a particular focus on <strong>political violence</strong>. A new dataset of 480 labeled clips was developed, covering four distinct categories. By fine-tuning MoViNet-A0 and designing a custom keyframe extraction algorithm, the model achieved <strong>92.86% accuracy</strong> with just 1.9M parameters. Our system outperforms state-of-the-art approaches across benchmarks, underscoring its effectiveness for real-world security and policy-making applications.
+                </p>
+              </td>
+            </tr>
+
+
+
+
+
+            <!-- 2025 IEEE Access Paper - CAMFusion -->
+            <tr onmouseout="nerfcasting_stop()" onmouseover="nerfcasting_start()">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='nerfcasting_image'>
+                    <img src='images/camfusion.PNG' width="100%">
+                  </div>
+                </div>
+                
+                <script type="text/javascript">
+                  function nerfcasting_start() {
+                    document.getElementById('nerfcasting_image').style.opacity = "1";
+                  }
+        
+                  function nerfcasting_stop() {
+                    document.getElementById('nerfcasting_image').style.opacity = "0";
+                  }
+                  nerfcasting_stop()
+                </script>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <a href="https://ieeexplore.ieee.org/abstract/document/10856108">
+                  <span class="papertitle">CAMFusion: Context-Aware Multi-Modal Fusion Framework for Detecting Sarcasm and Humor Integrating Video and Textual Cues</span>
+                </a>
+                <br>
+                M. Rahman, 
+                <strong>Md. Al-Mamun Provath</strong>, 
+                <a href="https://scholar.google.com/citations?user=du_bCPIAAAAJ&hl=en&oi=sra">Kaushik Deb</a>, 
+                <a href="https://scholar.google.com/citations?user=L2Ra8yMAAAAJ&hl=en&oi=sra">Pranab Kumar Dhar</a>, 
+                <a href="https://ieeexplore.ieee.org/author/37271969400">Tetsuya Shimamura</a>.
+                <br>
+                <em>IEEE Access</em>, 2025
+                <br>
+                <p></p>
+                <p>
+                  This work presents <strong>CAMFusion</strong>, a context-aware multi-modal fusion framework for detecting sarcasm and humor in <strong>Bangla videos</strong>. A novel dataset of annotated video clips across humor, sarcasm, and normal categories was developed. The framework integrates visual features from an Efficient Fusion Time-Distributed MobileNetV2 with textual features processed via BiLSTM and GRU, achieving <strong>90% accuracy</strong>. A Bangla Text Extraction Algorithm further enhances context capture from complex frames, demonstrating robustness and adaptability across multiple multimodal datasets.
+                </p>
+              </td>
+            </tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                     
+           
+            <!-- 2024 Paper -->
+            <tr onmouseout="nerfcasting_stop()" onmouseover="nerfcasting_start()">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='nerfcasting_image'>
+                    <img src='images/keyframe.PNG' width="100%">
+                  </div>
+                </div>
+                
+                <script type="text/javascript">
+                  function nerfcasting_start() {
+                    document.getElementById('nerfcasting_image').style.opacity = "1";
+                  }
+        
+                  function nerfcasting_stop() {
+                    document.getElementById('nerfcasting_image').style.opacity = "0";
+                  }
+                  nerfcasting_stop()
+                </script>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=ylvGqngAAAAJ&citation_for_view=ylvGqngAAAAJ:9yKSN-GCB0IC">
+                  <span class="papertitle">XAI-Driven Lightweight Multiscale ConvLSTM Architecture for Video Violence Detection</span>
+                </a>
+                <br>
+                <strong>Md. Al-Mamun Provath</strong>,
+                <a href="https://scholar.google.com/citations?user=du_bCPIAAAAJ&hl=en&oi=sra"> Kaushik Deb</a>,
+                <a href="https://scholar.google.com/citations?user=Bb2LvXcAAAAJ&hl=en&oi=sra"> Kang-Hyun Jo</a>.
+                <br>
+                <em>IEEE</em>, 2024
+                <br>
+                <p></p>
+                <p>
+                  By introducing a novel deep neural network architecture with multiscale ConvLSTM and EvoNorm-S0, we achieved 92.40% accuracy in violence detection, with a processing time of 5 milliseconds, optimizing both accuracy and computational efficiency.
+                </p>
+              </td>
+            </tr>
+
+            <!-- 2023 IEEE Access Paper -->
+            <tr onmouseout="nerfcasting_stop()" onmouseover="nerfcasting_start()">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='nerfcasting_image'>
+                    <img src='images/IEEE_2023.jpg' width="100%">
+                  </div>
+                </div>
+                
+                <script type="text/javascript">
+                  function nerfcasting_start() {
+                    document.getElementById('nerfcasting_image').style.opacity = "1";
+                  }
+        
+                  function nerfcasting_stop() {
+                    document.getElementById('nerfcasting_image').style.opacity = "0";
+                  }
+                  nerfcasting_stop()
+                </script>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <a href="https://ieeexplore.ieee.org/abstract/document/10271288">
+                  <span class="papertitle">Classification of Lung and Colon Cancer Histopathological Images Using Global Context Attention Based Convolutional Neural Network</span>
+                </a>
+                <br>
+                <strong>Md. Al-Mamun Provath</strong>,
+                <a href="https://scholar.google.com/citations?user=du_bCPIAAAAJ&hl=en&oi=sra"> Kaushik Deb</a>,
+                <a href="https://scholar.google.com/citations?user=L2Ra8yMAAAAJ&hl=en&oi=sra">Pranab Kumar Dhar</a>,
+                <a href="https://ieeexplore.ieee.org/author/37271969400">Tetsuya Shimamura</a>.
+                <br>
+                <em>IEEE Access</em>, 2023
+                <br>
+                <p></p>
+                <p>
+                  Utilizing a global context attention-guided convolutional neural network, we significantly improved image and patient-level accuracy for cancer classification while reducing computational costs, making the model highly suitable for mobile deployment.
+                </p>
+              </td>
+            </tr>
+
+            <!-- 2023 Springer Paper -->
+            <tr onmouseout="nerfcasting_stop()" onmouseover="nerfcasting_start()">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='nerfcasting_image'>
+                    <img src='images/Springer_lung.jpg' width="100%">
+                  </div>
+                </div>
+                
+                <script type="text/javascript">
+                  function nerfcasting_start() {
+                    document.getElementById('nerfcasting_image').style.opacity = "1";
+                  }
+        
+                  function nerfcasting_stop() {
+                    document.getElementById('nerfcasting_image').style.opacity = "0";
+                  }
+                  nerfcasting_stop()
+                </script>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <a href="https://link.springer.com/chapter/10.1007/978-981-99-4914-4_5">
+                  <span class="papertitle">Classification of Lung and Colon Cancer Using Deep Learning Method</span>
+                </a>
+                <br>
+                <strong>Md. Al-Mamun Provath</strong>,
+                <a href="https://scholar.google.com/citations?user=du_bCPIAAAAJ&hl=en&oi=sra"> Kaushik Deb</a>,
+                <a href="https://scholar.google.com/citations?user=Bb2LvXcAAAAJ&hl=en&oi=sra"> Kang-Hyun Jo</a>.
+                <br>
+                <em>Springer Nature Singapore</em>, 2023
+                <br>
+                <p></p>
+                <p>
+                  By leveraging a computationally efficient CNN model and cyclic learning rate, we improved cancer detection accuracy to 97%, facilitating rapid identification of lung and colon cancers while maintaining computational efficiency.
+                </p>
+              </td>
+            </tr>
+
+          </tbody></table>
+
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"> <tbody> <tr> <td style="padding:0px"> <br> <p style="text-align:right;font-size:small;"> This website design is adopted from <a href="https://maxineaps.github.io/" style="color:blue;text-decoration:none;">Maxine Perroni-Scharf</a> and the code is originally from <a href="https://github.com/jonbarron/jonbarron_website" style="color:blue;text-decoration:none;">Jon Barron's</a> website code. </p> </td> </tr> </tbody> </table>
+        
+          </body>
+        </html>
