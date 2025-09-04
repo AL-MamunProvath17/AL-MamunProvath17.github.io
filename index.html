@@ -611,7 +611,7 @@
       <div class="hero-container">
         <div class="hero-content">
           <h1>Md. Al-Mamun Provath</h1>
-          <div class="hero-subtitle">Researcher & Lecturer</div>
+          <div class="hero-subtitle">AI Research Scholar & Lecturer</div>
           <div class="hero-university">Chittagong University of Engineering & Technology</div>
           
           <div class="hero-stats">
@@ -625,7 +625,7 @@
             </div>
             <div class="stat-item">
               <span class="stat-number">3.96</span>
-              <div class="stat-label">CGPA (1st/130)</div>
+              <div class="stat-label">GPA (1st/130)</div>
             </div>
           </div>
           
@@ -780,7 +780,7 @@
         }
       });
 
-      // Publication filters
+      // Publication filters with improved logic
       const filterBtns = document.querySelectorAll('.filter-btn');
       const publications = document.querySelectorAll('.publication-item');
 
@@ -791,19 +791,48 @@
           // Add active class to clicked button
           btn.classList.add('active');
 
-          const filter = btn.textContent;
+          const filter = btn.textContent.trim();
 
           publications.forEach(pub => {
-            if (filter === 'All') {
+            const badge = pub.querySelector('.publication-badge');
+            const venue = pub.querySelector('.publication-venue');
+            const badgeText = badge ? badge.textContent.trim() : '';
+            const venueText = venue ? venue.textContent.trim() : '';
+
+            let shouldShow = false;
+
+            switch (filter) {
+              case 'All':
+                shouldShow = true;
+                break;
+              case '2025':
+                shouldShow = badgeText === '2025';
+                break;
+              case 'Journals':
+                shouldShow = venueText.includes('Access') || venueText.includes('Journal');
+                break;
+              case 'Conferences':
+                shouldShow = !venueText.includes('Access') && !venueText.includes('Journal');
+                break;
+              default:
+                shouldShow = true;
+            }
+
+            // Smooth transition
+            if (shouldShow) {
               pub.style.display = 'block';
-            } else if (filter === '2025' && pub.querySelector('.publication-badge').textContent === '2025') {
-              pub.style.display = 'block';
-            } else if (filter === 'Journals' && pub.querySelector('.publication-venue').textContent.includes('Access')) {
-              pub.style.display = 'block';
-            } else if (filter === 'Conferences' && !pub.querySelector('.publication-venue').textContent.includes('Access')) {
-              pub.style.display = 'block';
+              pub.style.opacity = '0';
+              pub.style.transform = 'translateY(20px)';
+              setTimeout(() => {
+                pub.style.opacity = '1';
+                pub.style.transform = 'translateY(0)';
+              }, 100);
             } else {
-              pub.style.display = 'none';
+              pub.style.opacity = '0';
+              pub.style.transform = 'translateY(-20px)';
+              setTimeout(() => {
+                pub.style.display = 'none';
+              }, 300);
             }
           });
         });
