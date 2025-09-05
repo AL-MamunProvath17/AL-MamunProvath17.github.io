@@ -1,189 +1,98 @@
-# Academic Portfolio Website
+# 🎓 Md. Al-Mamun Provath: Academic Portfolio
 
-This is the personal academic portfolio of **Md. Al-Mamun Provath**, showcasing research publications, academic background, and professional links.
+This is the personal academic portfolio of **Md. Al-Mamun Provath**, designed to showcase my research publications, academic background, and professional links in a clean, professional format. The website is a lightweight, responsive HTML/CSS template inspired by academic best practices.
 
-The website is based on a lightweight HTML/CSS template adapted from [Jon Barron's academic website](https://github.com/jonbarron/jonbarron_website) and further customized for a modern, professional look.
+-----
 
----
+## ✨ Features
 
-## 🚀 Features
+  * **Academic Profile:** Includes a personal bio, affiliations, and key contact information.
+  * **Research Publications:** A structured list of papers with direct links to academic databases.
+  * **Responsive Design:** Optimized for seamless viewing on both desktop and mobile devices.
+  * **Lightweight & Fast:** Built with pure HTML and CSS, requiring no heavy frameworks.
+  * **Professional Look:** A clean, modern interface focused on content clarity.
 
-- **Academic Profile**: Includes bio, affiliations, and contact information
-- **Research Publications**: Structured list of published papers with links to IEEE, Springer, and Google Scholar
-- **Responsive Layout**: Optimized for desktop and mobile viewing
-- **Lightweight**: Pure HTML and CSS without unnecessary frameworks
-- **Professional Design**: Clean, modern interface focused on academic content
-
----
+-----
 
 ## 📂 Project Structure
 
 ```
 .
-├── index.html             # Main HTML file (your portfolio page)
-├── stylesheet.css         # Custom styles
-├── images/                # Profile photo and publication figures
-│   └── Provath.jpeg      # Profile photo
-├── data/                  # CV and bio files
-│   ├── Provath-CV.pdf    # Academic CV
-│   └── Provath-bio.txt   # Short biography
-├── favicon/               # Favicon files
-│   ├── favicon.ico
-│   └── favicon-16x16.png
-└── README.md              # Documentation (this file)
+├── index.html             # Your main portfolio page
+├── stylesheet.css         # Custom CSS for styling
+├── images/                # Profile photo and publication figures
+│   └── Provath.jpeg
+├── data/                  # Your CV and bio files
+│   ├── Provath-CV.pdf
+│   └── Provath-bio.txt
+└── README.md              # This documentation file
 ```
 
----
+-----
 
 ## 🛠️ How to Use
 
-### 1. Clone the Repository
+### 1\. Get Started
+
+Clone the repository to your local machine:
+
 ```bash
 git clone https://github.com/your-username/portfolio.git
 cd portfolio
 ```
 
-### 2. View Locally
-Open `index.html` in any modern web browser to preview the website.
+### 2\. Customize Your Content
 
-### 3. Customize Your Content
+Open `index.html` and `stylesheet.css` to begin customizing:
 
-#### **Profile Information**
-- **Photo**: Replace `images/Provath.jpeg` with your profile photo
-- **Bio**: Edit the biography section directly in `index.html`
-- **Contact**: Update email, institutional affiliation, and other details
+  * **Profile:** Replace `images/Provath.jpeg` with your own photo and edit the bio section directly in `index.html`.
+  * **Publications:** Update the `Publications` section in `index.html` by modifying or adding entries.
+  * **Links:** Add your personal and professional links (email, Google Scholar, LinkedIn, GitHub, etc.) to the contact and header sections.
+  * **CV:** Replace the placeholder `data/Provath-CV.pdf` with your updated CV.
 
-#### **Publications**
-Add or modify publications by editing the `<tr>` blocks in `index.html`:
-```html
-<tr>
-  <td style="padding:20px;width:25%;vertical-align:middle">
-    <div class="one">
-      <img src='images/your-paper-image.png' width="160">
-    </div>
-  </td>
-  <td style="padding:20px;width:75%;vertical-align:middle">
-    <a href="link-to-paper">
-      <papertitle>Your Paper Title</papertitle>
-    </a>
-    <br>
-    <strong>Your Name</strong>, Co-author Name
-    <br>
-    <em>Conference/Journal Name</em>, Year
-    <br>
-    <a href="paper-link">paper</a> /
-    <a href="project-link">project</a>
-    <p>Brief description of your research contribution.</p>
-  </td>
-</tr>
-```
+### 3\. Deploy Your Website
 
-#### **Professional Links**
-Update the header section with your:
-- Email address
-- Google Scholar profile
-- LinkedIn profile  
-- GitHub profile
-- ORCID (optional)
+You can deploy your website for free using **GitHub Pages**:
 
-#### **CV and Bio Files**
-- Replace `data/Provath-CV.pdf` with your academic CV
-- Update `data/Provath-bio.txt` with your biography
+1.  Push your project to a new repository on GitHub.
+2.  Go to **Settings → Pages** in your repository.
+3.  Select the `main` branch and `/root` as the source.
 
----
+Your site will be live at `https://your-username.github.io/portfolio/`.
 
-## 🌐 Deployment
+-----
 
-### GitHub Pages (Free Hosting)
-1. Push your repository to GitHub
-2. Go to **Settings → Pages** in your repository
-3. Select the `main` branch and `/root` folder as source
-4. Your site will be live at: `https://your-username.github.io/portfolio/`
+## 🤝 Contributing & Feedback
 
-### Other Hosting Options
-- **Netlify**: Drag and drop your folder for instant deployment
-- **Vercel**: Connect your GitHub repository for automatic deployments
-- **Traditional Web Hosting**: Upload files via FTP to your hosting provider
+I welcome suggestions for improvements. If you find a bug or have an idea, feel free to submit an issue or a pull request.
 
----
+-----
 
-## 🎨 Customization
+## 📄 License
 
-### Colors and Styling
-Modify `stylesheet.css` to change:
-- Color scheme
-- Typography
-- Layout spacing
-- Responsive breakpoints
+This project is licensed under the **MIT License**.
 
-### Adding New Sections
-You can easily add new sections like:
-- Teaching experience
-- Awards and honors
-- Service activities
-- Software/tools developed
-
-Follow the existing HTML structure and styling patterns.
-
----
-
-## 📱 Browser Compatibility
-
-This website is compatible with all modern browsers:
-- Chrome 60+
-- Firefox 55+
-- Safari 12+
-- Edge 79+
-
----
-
-## 🤝 Contributing
-
-If you find bugs or have suggestions for improvements:
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/improvement`)
-3. Commit your changes (`git commit -am 'Add new feature'`)
-4. Push to the branch (`git push origin feature/improvement`)
-5. Create a Pull Request
-
----
-
-## 📜 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
----
+-----
 
 ## 🙏 Acknowledgments
 
-- Website design inspired by [Maxine Perroni-Scharf](https://maxineaps.github.io/)
-- Original code adapted from [Jon Barron's academic website](https://github.com/jonbarron/jonbarron_website)
-- Template structure follows academic portfolio best practices
+  * Website design inspired by [Maxine Perroni-Scharf](https://maxineaps.github.io/).
+  * Original code adapted from [Jon Barron's academic website](https://github.com/jonbarron/jonbarron_website).
 
----
+-----
 
-## 👤 Author
+## ✍️ Author
 
-**Md. Al-Mamun Provath**  
-Lecturer, Department of Computer Science and Engineering  
+**Md. Al-Mamun Provath** Lecturer, Department of Computer Science and Engineering  
 [Chittagong University of Engineering & Technology (CUET)](https://cuet.ac.bd/)
 
-📧 [am.provath@cuet.ac.bd](mailto:am.provath@cuet.ac.bd)  
-🎓 [Google Scholar](https://scholar.google.com/citations?user=your-id)  
-💼 [LinkedIn](https://linkedin.com/in/your-profile)  
-💻 [GitHub](https://github.com/your-username)
+**Contact & Links:**
 
----
+  * Email: [am.provath@cuet.ac.bd](mailto:am.provath@cuet.ac.bd)
+  * Google Scholar: [your-google-scholar-id](https://www.google.com/search?q=https://scholar.google.com/citations%3Fuser%3Dyour-google-scholar-id)
+  * LinkedIn: [your-linkedin-profile](https://www.google.com/search?q=https://linkedin.com/in/your-linkedin-profile)
+  * GitHub: [your-github-username](https://github.com/your-github-username)
 
-## 📈 Future Enhancements
+-----
 
-- [ ] Add dark mode toggle
-- [ ] Implement blog section
-- [ ] Add publication search/filter functionality
-- [ ] Include interactive research timeline
-- [ ] Add contact form
-- [ ] Implement analytics tracking
-
----
-
-*Last updated: September 2025*
+*Last Updated: September 2025*
