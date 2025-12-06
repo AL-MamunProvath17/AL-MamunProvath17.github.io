@@ -83,7 +83,7 @@ This project is licensed under the **MIT License**.
 
 ## ✍️ Author
 
-**Md. Al-Mamun Provath** Assistant Professor, Department of Computer Science and Engineering  
+**Md. Al-Mamun Provath**, Assistant Professor, Department of Computer Science and Engineering  
 [Chittagong University of Engineering & Technology (CUET)](https://cuet.ac.bd/)
 
 **Contact & Links:**
