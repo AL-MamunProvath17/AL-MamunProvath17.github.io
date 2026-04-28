@@ -89,9 +89,7 @@ This project is licensed under the **MIT License**.
 **Contact & Links:**
 
   * Email: [am.provath@cuet.ac.bd](mailto:am.provath@cuet.ac.bd)
-  * Google Scholar: [google-scholar-id](https://www.google.com/search?q=https://scholar.google.com/citations%3Fuser%3Dyour-google-scholar-id)
-  * LinkedIn: [your-linkedin-profile](https://www.google.com/search?q=https://linkedin.com/in/your-linkedin-profile)
-  * GitHub: [your-github-username](https://github.com/your-github-username)
+
 
 -----
 
